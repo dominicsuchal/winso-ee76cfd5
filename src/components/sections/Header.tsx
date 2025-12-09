@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import winsoLogo from "@/assets/winso-logo.jpg";
+import winsoLogo from "@/assets/winso-logo-transparent.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,11 +34,13 @@ const Header = () => {
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
-            <img 
-              src={winsoLogo} 
-              alt="WINSO - Hybrid is simply better" 
-              className="h-12 w-auto"
-            />
+            <div className="bg-accent rounded-lg p-2">
+              <img 
+                src={winsoLogo} 
+                alt="WINSO - Hybrid is simply better" 
+                className="h-8 w-auto invert"
+              />
+            </div>
           </a>
 
           {/* Desktop Navigation */}

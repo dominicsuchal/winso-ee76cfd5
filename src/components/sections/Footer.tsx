@@ -1,5 +1,5 @@
 import { Linkedin, Twitter, Youtube, Mail } from "lucide-react";
-import winsoLogo from "@/assets/winso-logo.jpg";
+import winsoLogo from "@/assets/winso-logo-transparent.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -39,11 +39,13 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <a href="#" className="flex items-center gap-2 mb-6">
-              <img 
-                src={winsoLogo} 
-                alt="WINSO - Hybrid is simply better" 
-                className="h-12 w-auto"
-              />
+              <div className="bg-accent rounded-lg p-2">
+                <img 
+                  src={winsoLogo} 
+                  alt="WINSO - Hybrid is simply better" 
+                  className="h-8 w-auto invert"
+                />
+              </div>
             </a>
             <p className="text-primary-foreground/60 mb-4">
               Hybrid is Simply Better
