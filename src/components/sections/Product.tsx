@@ -86,13 +86,13 @@ const Product = () => {
                 />
                 
                 {/* Floating specs */}
-                <div className="absolute -right-8 top-1/4 px-4 py-2 rounded-lg bg-foreground/90 border border-accent/30 text-sm shadow-lg backdrop-blur-sm">
-                  <span className="font-semibold text-accent">+30%</span>
-                  <span className="text-primary-foreground/70 ml-1">{t("product.output")}</span>
-                </div>
-                <div className="absolute left-0 bottom-1/3 px-4 py-2 rounded-lg bg-foreground/90 border border-accent/30 text-sm shadow-lg backdrop-blur-sm">
+                <div className="absolute -right-8 top-1/4 px-4 py-2 rounded-lg bg-foreground/90 border border-accent/30 text-sm shadow-lg backdrop-blur-sm z-20">
                   <span className="font-semibold text-accent">{t("product.hybrid")}</span>
                   <span className="text-primary-foreground/70 ml-1">{t("product.technology")}</span>
+                </div>
+                <div className="absolute left-0 bottom-1/4 px-4 py-2 rounded-lg bg-foreground/90 border border-accent/30 text-sm shadow-lg backdrop-blur-sm z-20">
+                  <span className="font-semibold text-accent">+30%</span>
+                  <span className="text-primary-foreground/70 ml-1">{t("product.output")}</span>
                 </div>
               </div>
             </div>
