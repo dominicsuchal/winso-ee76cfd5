@@ -18,24 +18,24 @@ const Hero = () => {
       </div>
 
       {/* Floating Logo with Green Glow */}
-      <div className="absolute right-10 lg:right-20 top-1/2 -translate-y-1/2 hidden lg:block">
+      <div className="absolute right-10 lg:right-32 top-1/2 -translate-y-1/2 hidden lg:block">
         <div className="relative">
           {/* Green glow effect rings */}
-          <div className="absolute inset-0 w-72 h-72 rounded-full bg-cta/20 blur-3xl animate-pulse" />
-          <div className="absolute inset-4 w-64 h-64 rounded-full bg-cta/30 blur-2xl" />
+          <div className="absolute inset-0 w-96 h-96 rounded-full bg-cta/20 blur-3xl animate-pulse" />
+          <div className="absolute inset-4 w-88 h-88 rounded-full bg-cta/30 blur-2xl" />
           
           {/* Rotating border rings */}
-          <div className="w-72 h-72 rounded-full border-2 border-cta/30 flex items-center justify-center animate-spin-slow">
-            <div className="absolute w-56 h-56 rounded-full border border-cta/20" />
-            <div className="absolute w-40 h-40 rounded-full border border-cta/30" />
+          <div className="w-96 h-96 rounded-full border-2 border-cta/30 flex items-center justify-center animate-spin-slow">
+            <div className="absolute w-80 h-80 rounded-full border border-cta/20" />
+            <div className="absolute w-64 h-64 rounded-full border border-cta/30" />
           </div>
           
           {/* Logo in center with white filter and green glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-6">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-8">
             <img 
               src={winsoLogo} 
               alt="WINSO" 
-              className="h-24 w-auto brightness-0 invert drop-shadow-[0_0_25px_hsl(var(--cta))] drop-shadow-[0_0_50px_hsl(var(--cta)/0.5)]"
+              className="h-40 w-auto brightness-0 invert drop-shadow-[0_0_35px_hsl(var(--cta))] drop-shadow-[0_0_70px_hsl(var(--cta)/0.5)]"
             />
           </div>
         </div>
