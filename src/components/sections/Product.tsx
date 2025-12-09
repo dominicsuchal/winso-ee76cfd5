@@ -77,7 +77,7 @@ const Product = () => {
                 />
                 
                 {/* Floating specs */}
-                <div className="absolute right-0 top-1/4 px-4 py-2 rounded-lg bg-foreground/90 border border-accent/30 text-sm shadow-lg backdrop-blur-sm">
+                <div className="absolute -right-8 top-1/4 px-4 py-2 rounded-lg bg-foreground/90 border border-accent/30 text-sm shadow-lg backdrop-blur-sm">
                   <span className="font-semibold text-accent">+30%</span>
                   <span className="text-primary-foreground/70 ml-1">Output</span>
                 </div>
