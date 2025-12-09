@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import winsoTurbineIcon from "@/assets/winso-turbine-icon.jpg";
+import winsoTurbineIcon from "@/assets/winso-turbine-icon.png";
 import LanguageToggle from "@/components/LanguageToggle";
 import { useLanguage } from "@/contexts/LanguageContext";
 
