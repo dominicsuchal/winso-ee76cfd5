@@ -37,12 +37,11 @@ const Header = () => {
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="relative">
-              <div className="absolute inset-0 bg-cta/30 blur-lg rounded-full" />
+            <div className="bg-cta rounded-xl p-2">
               <img 
                 src={winsoTurbineIcon} 
                 alt="WINSO - Hybrid is simply better" 
-                className="h-10 w-auto relative z-10 brightness-0 invert drop-shadow-[0_0_8px_hsl(var(--cta))]"
+                className="h-12 w-auto"
               />
             </div>
           </a>
