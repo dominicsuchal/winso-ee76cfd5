@@ -1,29 +1,32 @@
 import { Factory, TrendingUp, Package, Repeat } from "lucide-react";
-
-const pillars = [
-  {
-    icon: Factory,
-    title: "In-House Manufacturing",
-    description: "Cost-effective production through complete manufacturing control.",
-  },
-  {
-    icon: Package,
-    title: "Lean Product Line",
-    description: "Initially lean offering for efficiency and lower costs than comparable models.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Scalable Model",
-    description: "Simple structure designed to scale with growing market demand.",
-  },
-  {
-    icon: Repeat,
-    title: "Recurring Revenue",
-    description: "One-time sales foundation with stable, recurring revenue and growth potential.",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const BusinessModel = () => {
+  const { t } = useLanguage();
+
+  const pillars = [
+    {
+      icon: Factory,
+      title: t("business.pillar1Title"),
+      description: t("business.pillar1Desc"),
+    },
+    {
+      icon: Package,
+      title: t("business.pillar2Title"),
+      description: t("business.pillar2Desc"),
+    },
+    {
+      icon: TrendingUp,
+      title: t("business.pillar3Title"),
+      description: t("business.pillar3Desc"),
+    },
+    {
+      icon: Repeat,
+      title: t("business.pillar4Title"),
+      description: t("business.pillar4Desc"),
+    },
+  ];
+
   return (
     <section className="py-24 lg:py-32 gradient-hero relative overflow-hidden">
       {/* Decorative elements */}
@@ -37,24 +40,20 @@ const BusinessModel = () => {
           {/* Content */}
           <div>
             <span className="inline-block px-4 py-1.5 rounded-full bg-primary-foreground/10 text-primary-foreground text-sm font-medium mb-6 backdrop-blur-sm">
-              Business Model
+              {t("business.badge")}
             </span>
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight mb-6">
-              Simple and{" "}
-              <span className="text-accent">Scalable</span>
+              {t("business.headline")}{" "}
+              <span className="text-accent">{t("business.headlineHighlight")}</span>
             </h2>
             
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-6">
-              Our business model is simple and scalable. Our goal is to manufacture wind turbines 
-              cost-effectively through in-house production. The WINSO turbine is not significantly 
-              more expensive than a traditional vertical turbine.
+              {t("business.p1")}
             </p>
 
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-10">
-              Through an initially lean offering, we can provide our product more efficiently 
-              and at a lower cost than comparable performance models on the market. Focusing on 
-              one-time sales allows us to achieve stable and recurring revenue with growth potential.
+              {t("business.p2")}
             </p>
 
             {/* Pillars */}
@@ -86,17 +85,17 @@ const BusinessModel = () => {
             <div className="relative bg-foreground/50 backdrop-blur-sm rounded-3xl p-8 lg:p-10 border border-primary-foreground/10">
               {/* Key Metrics */}
               <h3 className="text-xl font-semibold text-primary-foreground mb-8 text-center">
-                Our Approach
+                {t("business.approach")}
               </h3>
               
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center p-4 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10">
-                  <div className="text-2xl font-bold text-accent mb-1">Cost</div>
-                  <div className="text-xs text-primary-foreground/70">Effective<br/>Production</div>
+                  <div className="text-2xl font-bold text-accent mb-1">{t("business.costEffective")}</div>
+                  <div className="text-xs text-primary-foreground/70">{t("business.effectiveProd")}<br/>{t("business.production")}</div>
                 </div>
                 <div className="text-center p-4 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10">
-                  <div className="text-2xl font-bold text-accent mb-1">Lean</div>
-                  <div className="text-xs text-primary-foreground/70">Initial<br/>Offering</div>
+                  <div className="text-2xl font-bold text-accent mb-1">{t("business.lean")}</div>
+                  <div className="text-xs text-primary-foreground/70">{t("business.initial")}<br/>{t("business.offering")}</div>
                 </div>
               </div>
             </div>

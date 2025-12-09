@@ -4,10 +4,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, Send, CheckCircle, User } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const { t } = useLanguage();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -20,8 +22,8 @@ const Contact = () => {
     setIsSubmitted(true);
     
     toast({
-      title: "Message sent!",
-      description: "We'll get back to you as soon as possible.",
+      title: t("contact.thankYou"),
+      description: t("contact.thankYouMsg"),
     });
   };
 
@@ -38,17 +40,16 @@ const Contact = () => {
           {/* Content */}
           <div>
             <span className="inline-block px-4 py-1.5 rounded-full bg-primary-foreground/10 text-primary-foreground text-sm font-medium mb-6 backdrop-blur-sm">
-              Get in Touch
+              {t("contact.badge")}
             </span>
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight mb-6">
-              Ready to Power Your{" "}
-              <span className="text-accent">Future?</span>
+              {t("contact.headline")}{" "}
+              <span className="text-accent">{t("contact.headlineHighlight")}</span>
             </h2>
             
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-10">
-              Whether you have questions about our turbines, need a custom quote, 
-              or just want to learn more about wind power—we're here to help.
+              {t("contact.subheadline")}
             </p>
 
             {/* Contact Info */}
@@ -58,7 +59,7 @@ const Contact = () => {
                   <User className="w-5 h-5 text-accent" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-primary-foreground mb-1">Contact Person</h4>
+                  <h4 className="font-semibold text-primary-foreground mb-1">{t("contact.person")}</h4>
                   <span className="text-primary-foreground/70">Marian Suchal</span>
                 </div>
               </div>
@@ -68,7 +69,7 @@ const Contact = () => {
                   <Mail className="w-5 h-5 text-accent" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-primary-foreground mb-1">Email Us</h4>
+                  <h4 className="font-semibold text-primary-foreground mb-1">{t("contact.emailUs")}</h4>
                   <a
                     href="mailto:project@winso-turbine.com"
                     className="text-primary-foreground/70 hover:text-accent transition-colors"
@@ -83,7 +84,7 @@ const Contact = () => {
                   <Phone className="w-5 h-5 text-accent" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-primary-foreground mb-1">Call Us</h4>
+                  <h4 className="font-semibold text-primary-foreground mb-1">{t("contact.callUs")}</h4>
                   <a
                     href="tel:+421902900115"
                     className="text-primary-foreground/70 hover:text-accent transition-colors"
@@ -105,17 +106,17 @@ const Contact = () => {
                     <CheckCircle className="w-10 h-10 text-accent" />
                   </div>
                   <h3 className="text-2xl font-bold text-primary-foreground mb-2">
-                    Thank You!
+                    {t("contact.thankYou")}
                   </h3>
                   <p className="text-primary-foreground/70 mb-6">
-                    Your message has been sent successfully. We'll be in touch soon.
+                    {t("contact.thankYouMsg")}
                   </p>
                   <Button
                     variant="outline"
                     onClick={() => setIsSubmitted(false)}
                     className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10"
                   >
-                    Send Another Message
+                    {t("contact.sendAnother")}
                   </Button>
                 </div>
               ) : (
@@ -126,12 +127,12 @@ const Contact = () => {
                         htmlFor="name"
                         className="block text-sm font-medium text-primary-foreground mb-2"
                       >
-                        Name
+                        {t("contact.name")}
                       </label>
                       <Input
                         id="name"
                         name="name"
-                        placeholder="Your name"
+                        placeholder={t("contact.namePlaceholder")}
                         required
                         className="bg-primary-foreground/5 border-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/40"
                       />
@@ -141,13 +142,13 @@ const Contact = () => {
                         htmlFor="email"
                         className="block text-sm font-medium text-primary-foreground mb-2"
                       >
-                        Email
+                        {t("contact.email")}
                       </label>
                       <Input
                         id="email"
                         name="email"
                         type="email"
-                        placeholder="you@example.com"
+                        placeholder={t("contact.emailPlaceholder")}
                         required
                         className="bg-primary-foreground/5 border-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/40"
                       />
@@ -159,12 +160,12 @@ const Contact = () => {
                       htmlFor="subject"
                       className="block text-sm font-medium text-primary-foreground mb-2"
                     >
-                      Subject
+                      {t("contact.subject")}
                     </label>
                     <Input
                       id="subject"
                       name="subject"
-                      placeholder="How can we help?"
+                      placeholder={t("contact.subjectPlaceholder")}
                       required
                       className="bg-primary-foreground/5 border-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/40"
                     />
@@ -175,12 +176,12 @@ const Contact = () => {
                       htmlFor="message"
                       className="block text-sm font-medium text-primary-foreground mb-2"
                     >
-                      Message
+                      {t("contact.message")}
                     </label>
                     <Textarea
                       id="message"
                       name="message"
-                      placeholder="Tell us about your project..."
+                      placeholder={t("contact.messagePlaceholder")}
                       rows={5}
                       required
                       className="bg-primary-foreground/5 border-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/40 resize-none"
@@ -197,11 +198,11 @@ const Contact = () => {
                     {isSubmitting ? (
                       <>
                         <div className="w-5 h-5 border-2 border-accent-foreground/30 border-t-accent-foreground rounded-full animate-spin" />
-                        Sending...
+                        {t("contact.sending")}
                       </>
                     ) : (
                       <>
-                        Send Message
+                        {t("contact.sendMessage")}
                         <Send className="w-4 h-4" />
                       </>
                     )}
