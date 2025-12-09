@@ -84,48 +84,12 @@ const BusinessModel = () => {
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-br from-accent/10 to-primary-foreground/5 rounded-3xl blur-xl" />
             <div className="relative bg-foreground/50 backdrop-blur-sm rounded-3xl p-8 lg:p-10 border border-primary-foreground/10">
-              {/* Revenue Model Visualization */}
+              {/* Key Metrics */}
               <h3 className="text-xl font-semibold text-primary-foreground mb-8 text-center">
-                Revenue Strategy
+                Our Approach
               </h3>
               
-              <div className="space-y-6">
-                {/* Primary Revenue */}
-                <div className="relative">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="font-medium text-primary-foreground">Direct Turbine Sales</span>
-                    <span className="text-accent font-semibold">70%</span>
-                  </div>
-                  <div className="h-3 bg-primary-foreground/10 rounded-full overflow-hidden">
-                    <div className="h-full w-[70%] bg-accent rounded-full" />
-                  </div>
-                </div>
-
-                {/* Secondary Revenue */}
-                <div className="relative">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="font-medium text-primary-foreground">Installation Services</span>
-                    <span className="text-accent font-semibold">15%</span>
-                  </div>
-                  <div className="h-3 bg-primary-foreground/10 rounded-full overflow-hidden">
-                    <div className="h-full w-[15%] bg-accent/70 rounded-full" />
-                  </div>
-                </div>
-
-                {/* Tertiary Revenue */}
-                <div className="relative">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="font-medium text-primary-foreground">Maintenance & Parts</span>
-                    <span className="text-accent font-semibold">15%</span>
-                  </div>
-                  <div className="h-3 bg-primary-foreground/10 rounded-full overflow-hidden">
-                    <div className="h-full w-[15%] bg-accent/50 rounded-full" />
-                  </div>
-                </div>
-              </div>
-
-              {/* Key Metrics */}
-              <div className="grid grid-cols-2 gap-4 mt-10">
+              <div className="grid grid-cols-2 gap-4">
                 <div className="text-center p-4 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10">
                   <div className="text-2xl font-bold text-accent mb-1">Cost</div>
                   <div className="text-xs text-primary-foreground/70">Effective<br/>Production</div>
