@@ -49,7 +49,7 @@ const WhyWinso = () => {
             Why Choose Us
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight mb-6">
-            Why Choose WINSO?
+            Why Choose <span className="text-accent">WINSO</span>?
           </h2>
           <p className="text-lg text-primary-foreground/80">
             When it comes to small wind power, WINSO delivers on every front. 
@@ -62,10 +62,10 @@ const WhyWinso = () => {
           {benefits.map((benefit, index) => (
             <div
               key={benefit.title}
-              className="group p-6 lg:p-8 rounded-2xl bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/10 hover:bg-primary-foreground/20 transition-all duration-300"
+              className="group p-6 lg:p-8 rounded-2xl bg-foreground/50 backdrop-blur-sm border border-primary-foreground/10 hover:border-accent/30 transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-xl bg-primary-foreground/10 flex items-center justify-center mb-5 group-hover:bg-cta group-hover:scale-110 transition-all duration-300">
-                <benefit.icon className="w-7 h-7 text-primary-foreground group-hover:text-cta-foreground transition-colors" />
+              <div className="w-14 h-14 rounded-xl bg-accent/20 flex items-center justify-center mb-5 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                <benefit.icon className="w-7 h-7 text-accent group-hover:text-accent-foreground transition-colors" />
               </div>
               <h4 className="text-xl font-semibold text-primary-foreground mb-3">
                 {benefit.title}
@@ -84,7 +84,7 @@ const WhyWinso = () => {
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-cta text-cta-foreground font-semibold shadow-cta hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-accent text-accent-foreground font-semibold shadow-cta hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
           >
             Get Started Today
           </a>

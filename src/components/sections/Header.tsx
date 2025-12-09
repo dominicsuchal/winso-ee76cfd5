@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Wind, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import winsoLogo from "@/assets/winso-logo.jpg";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,18 +26,19 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-card/90 backdrop-blur-lg shadow-soft"
+          ? "bg-foreground/95 backdrop-blur-lg shadow-soft"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-xl gradient-hero flex items-center justify-center shadow-soft group-hover:shadow-glow transition-shadow duration-300">
-              <Wind className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="text-xl font-bold text-foreground">WINSO</span>
+          <a href="#" className="flex items-center gap-3 group">
+            <img 
+              src={winsoLogo} 
+              alt="WINSO - Hybrid is simply better" 
+              className="h-12 w-auto"
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -45,7 +47,11 @@ const Header = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-muted-foreground hover:text-primary font-medium transition-colors duration-200"
+                className={`font-medium transition-colors duration-200 ${
+                  isScrolled 
+                    ? "text-primary-foreground/70 hover:text-accent" 
+                    : "text-primary-foreground/70 hover:text-accent"
+                }`}
               >
                 {link.label}
               </a>
@@ -61,7 +67,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground"
+            className={`md:hidden p-2 ${isScrolled ? "text-primary-foreground" : "text-primary-foreground"}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -71,13 +77,13 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-20 left-0 right-0 bg-card/95 backdrop-blur-lg shadow-card animate-fade-in">
+          <div className="md:hidden absolute top-20 left-0 right-0 bg-foreground/95 backdrop-blur-lg shadow-card animate-fade-in">
             <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-foreground hover:text-primary font-medium py-2 transition-colors"
+                  className="text-primary-foreground hover:text-accent font-medium py-2 transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
