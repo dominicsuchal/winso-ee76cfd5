@@ -30,9 +30,9 @@ const Hero = () => {
         <div className="max-w-3xl">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 mb-8 animate-fade-up">
-            <Zap className="w-4 h-4 text-cta" />
+            <Zap className="w-4 h-4 text-accent" />
             <span className="text-sm font-medium text-primary-foreground">
-              Pioneering Renewable Energy
+              Hybrid is Simply Better
             </span>
           </div>
 
@@ -49,7 +49,7 @@ const Hero = () => {
               >
                 <path
                   d="M2 10C50 2 100 2 150 6C200 10 250 10 298 6"
-                  stroke="hsl(var(--cta))"
+                  stroke="hsl(var(--accent))"
                   strokeWidth="3"
                   strokeLinecap="round"
                 />
@@ -59,8 +59,9 @@ const Hero = () => {
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-10 max-w-2xl animate-fade-up delay-200">
-            Hybrid, efficient, and designed for independent electricity generation. 
-            Power your home, boat, or off-grid adventures with cutting-edge wind technology.
+            At WINSO, we aim to make renewable energy simpler, smarter, and more efficient. 
+            Our turbine combines wind and solar power into one hybrid system that produces 
+            stable energy even when weather conditions change.
           </p>
 
           {/* CTA Buttons */}

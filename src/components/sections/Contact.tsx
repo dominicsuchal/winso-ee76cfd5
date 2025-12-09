@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Phone, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, Send, CheckCircle, User } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -26,24 +26,27 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 lg:py-32 bg-background relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-secondary/50 to-transparent" />
+    <section id="contact" className="py-24 lg:py-32 gradient-hero relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary-foreground/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
+      </div>
       
       <div className="container mx-auto px-4 lg:px-8 relative">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Content */}
           <div>
-            <span className="inline-block px-4 py-1.5 rounded-full bg-cta/10 text-cta text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-primary-foreground/10 text-primary-foreground text-sm font-medium mb-6 backdrop-blur-sm">
               Get in Touch
             </span>
             
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight mb-6">
               Ready to Power Your{" "}
-              <span className="gradient-text">Future?</span>
+              <span className="text-accent">Future?</span>
             </h2>
             
-            <p className="text-lg text-muted-foreground leading-relaxed mb-10">
+            <p className="text-lg text-primary-foreground/80 leading-relaxed mb-10">
               Whether you have questions about our turbines, need a custom quote, 
               or just want to learn more about wind power—we're here to help.
             </p>
@@ -51,45 +54,42 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-5 h-5 text-primary" />
+                <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center flex-shrink-0">
+                  <User className="w-5 h-5 text-accent" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-1">Email Us</h4>
+                  <h4 className="font-semibold text-primary-foreground mb-1">Contact Person</h4>
+                  <span className="text-primary-foreground/70">Marian Suchal</span>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 text-accent" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-primary-foreground mb-1">Email Us</h4>
                   <a
-                    href="mailto:info@winso.energy"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    href="mailto:project@winso-turbine.com"
+                    className="text-primary-foreground/70 hover:text-accent transition-colors"
                   >
-                    info@winso.energy
+                    project@winso-turbine.com
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-5 h-5 text-primary" />
+                <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-5 h-5 text-accent" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-1">Call Us</h4>
+                  <h4 className="font-semibold text-primary-foreground mb-1">Call Us</h4>
                   <a
-                    href="tel:+4912345678"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    href="tel:+421902900115"
+                    className="text-primary-foreground/70 hover:text-accent transition-colors"
                   >
-                    +49 123 456 78
+                    +421 902 900 115
                   </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground mb-1">Visit Us</h4>
-                  <p className="text-muted-foreground">
-                    Innovation Park, Berlin<br />
-                    Germany
-                  </p>
                 </div>
               </div>
             </div>
@@ -97,22 +97,23 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-br from-primary/5 to-accent/5 rounded-3xl blur-xl" />
-            <div className="relative bg-card rounded-3xl p-8 lg:p-10 shadow-card">
+            <div className="absolute -inset-4 bg-gradient-to-br from-accent/10 to-primary-foreground/5 rounded-3xl blur-xl" />
+            <div className="relative bg-foreground/50 backdrop-blur-sm rounded-3xl p-8 lg:p-10 border border-primary-foreground/10">
               {isSubmitted ? (
                 <div className="text-center py-12">
-                  <div className="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-6">
+                  <div className="w-20 h-20 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-6">
                     <CheckCircle className="w-10 h-10 text-accent" />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-2">
+                  <h3 className="text-2xl font-bold text-primary-foreground mb-2">
                     Thank You!
                   </h3>
-                  <p className="text-muted-foreground mb-6">
+                  <p className="text-primary-foreground/70 mb-6">
                     Your message has been sent successfully. We'll be in touch soon.
                   </p>
                   <Button
                     variant="outline"
                     onClick={() => setIsSubmitted(false)}
+                    className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10"
                   >
                     Send Another Message
                   </Button>
@@ -123,7 +124,7 @@ const Contact = () => {
                     <div>
                       <label
                         htmlFor="name"
-                        className="block text-sm font-medium text-foreground mb-2"
+                        className="block text-sm font-medium text-primary-foreground mb-2"
                       >
                         Name
                       </label>
@@ -132,13 +133,13 @@ const Contact = () => {
                         name="name"
                         placeholder="Your name"
                         required
-                        className="bg-secondary/50 border-border"
+                        className="bg-primary-foreground/5 border-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/40"
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="email"
-                        className="block text-sm font-medium text-foreground mb-2"
+                        className="block text-sm font-medium text-primary-foreground mb-2"
                       >
                         Email
                       </label>
@@ -148,7 +149,7 @@ const Contact = () => {
                         type="email"
                         placeholder="you@example.com"
                         required
-                        className="bg-secondary/50 border-border"
+                        className="bg-primary-foreground/5 border-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/40"
                       />
                     </div>
                   </div>
@@ -156,7 +157,7 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="subject"
-                      className="block text-sm font-medium text-foreground mb-2"
+                      className="block text-sm font-medium text-primary-foreground mb-2"
                     >
                       Subject
                     </label>
@@ -165,14 +166,14 @@ const Contact = () => {
                       name="subject"
                       placeholder="How can we help?"
                       required
-                      className="bg-secondary/50 border-border"
+                      className="bg-primary-foreground/5 border-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/40"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium text-foreground mb-2"
+                      className="block text-sm font-medium text-primary-foreground mb-2"
                     >
                       Message
                     </label>
@@ -182,7 +183,7 @@ const Contact = () => {
                       placeholder="Tell us about your project..."
                       rows={5}
                       required
-                      className="bg-secondary/50 border-border resize-none"
+                      className="bg-primary-foreground/5 border-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/40 resize-none"
                     />
                   </div>
 
@@ -195,7 +196,7 @@ const Contact = () => {
                   >
                     {isSubmitting ? (
                       <>
-                        <div className="w-5 h-5 border-2 border-cta-foreground/30 border-t-cta-foreground rounded-full animate-spin" />
+                        <div className="w-5 h-5 border-2 border-accent-foreground/30 border-t-accent-foreground rounded-full animate-spin" />
                         Sending...
                       </>
                     ) : (
