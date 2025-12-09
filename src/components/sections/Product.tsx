@@ -1,6 +1,6 @@
 import { Check, Wind, Gauge, Battery, DollarSign, Shrink, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import winsoTurbine from "@/assets/winso-turbine.png";
 const features = [
   {
     icon: Wind,
@@ -64,34 +64,26 @@ const Product = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           {/* Product Visual */}
           <div className="relative order-2 lg:order-1">
-            <div className="aspect-square max-w-md mx-auto relative">
+            <div className="max-w-lg mx-auto relative">
               {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary-foreground/10 rounded-full blur-3xl" />
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary-foreground/10 rounded-3xl blur-3xl" />
               
-              {/* Turbine representation */}
-              <div className="relative h-full flex items-center justify-center">
-                <div className="relative w-64 h-64">
-                  {/* Rotating rings */}
-                  <div className="absolute inset-0 rounded-full border-4 border-accent/30 animate-spin-slow" />
-                  <div className="absolute inset-4 rounded-full border-2 border-primary-foreground/20 animate-spin-slow" style={{ animationDirection: 'reverse', animationDuration: '15s' }} />
-                  <div className="absolute inset-8 rounded-full border-2 border-accent/20 animate-spin-slow" style={{ animationDuration: '25s' }} />
-                  
-                  {/* Center icon */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-24 h-24 rounded-full bg-accent flex items-center justify-center shadow-glow">
-                      <Wind className="w-12 h-12 text-accent-foreground" />
-                    </div>
-                  </div>
-
-                  {/* Floating specs */}
-                  <div className="absolute -right-4 top-1/4 px-3 py-2 rounded-lg bg-foreground/80 border border-primary-foreground/20 text-sm">
-                    <span className="font-semibold text-accent">+30%</span>
-                    <span className="text-primary-foreground/70 ml-1">Output</span>
-                  </div>
-                  <div className="absolute -left-4 bottom-1/4 px-3 py-2 rounded-lg bg-foreground/80 border border-primary-foreground/20 text-sm">
-                    <span className="font-semibold text-accent">Safe</span>
-                    <span className="text-primary-foreground/70 ml-1">Operation</span>
-                  </div>
+              {/* Turbine Image */}
+              <div className="relative">
+                <img 
+                  src={winsoTurbine} 
+                  alt="WINSO Hybrid Wind-Solar Turbine" 
+                  className="w-full h-auto relative z-10 drop-shadow-2xl"
+                />
+                
+                {/* Floating specs */}
+                <div className="absolute right-0 top-1/4 px-4 py-2 rounded-lg bg-foreground/90 border border-accent/30 text-sm shadow-lg backdrop-blur-sm">
+                  <span className="font-semibold text-accent">+30%</span>
+                  <span className="text-primary-foreground/70 ml-1">Output</span>
+                </div>
+                <div className="absolute left-0 bottom-1/3 px-4 py-2 rounded-lg bg-foreground/90 border border-accent/30 text-sm shadow-lg backdrop-blur-sm">
+                  <span className="font-semibold text-accent">Hybrid</span>
+                  <span className="text-primary-foreground/70 ml-1">Technology</span>
                 </div>
               </div>
             </div>
