@@ -1,27 +1,29 @@
 import { Linkedin, Twitter, Youtube, Mail } from "lucide-react";
 import winsoLogo from "@/assets/winso-logo-transparent.png";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
 
   const footerLinks = {
     product: [
-      { label: "Features", href: "#product" },
-      { label: "Specifications", href: "#product" },
-      { label: "Installation", href: "#contact" },
-      { label: "Support", href: "#contact" },
+      { label: t("footer.features"), href: "#product" },
+      { label: t("footer.specifications"), href: "#product" },
+      { label: t("footer.installation"), href: "#contact" },
+      { label: t("footer.support"), href: "#contact" },
     ],
     company: [
-      { label: "About Us", href: "#about" },
-      { label: "Our Team", href: "#team" },
-      { label: "Careers", href: "#contact" },
-      { label: "Contact", href: "#contact" },
+      { label: t("footer.aboutUs"), href: "#about" },
+      { label: t("footer.ourTeam"), href: "#team" },
+      { label: t("footer.careers"), href: "#contact" },
+      { label: t("footer.contact"), href: "#contact" },
     ],
     resources: [
-      { label: "Documentation", href: "#" },
-      { label: "FAQ", href: "#" },
-      { label: "Blog", href: "#" },
-      { label: "Press Kit", href: "#" },
+      { label: t("footer.documentation"), href: "#" },
+      { label: t("footer.faq"), href: "#" },
+      { label: t("footer.blog"), href: "#" },
+      { label: t("footer.pressKit"), href: "#" },
     ],
   };
 
@@ -48,11 +50,10 @@ const Footer = () => {
               </div>
             </a>
             <p className="text-primary-foreground/60 mb-4">
-              Hybrid is Simply Better
+              {t("footer.slogan")}
             </p>
             <p className="text-primary-foreground/60 mb-6 max-w-sm">
-              Pioneering the future of small wind power. Efficient, affordable, 
-              and designed for independent energy generation.
+              {t("footer.description")}
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
@@ -70,7 +71,7 @@ const Footer = () => {
 
           {/* Product Links */}
           <div>
-            <h4 className="font-semibold text-primary-foreground mb-4">Product</h4>
+            <h4 className="font-semibold text-primary-foreground mb-4">{t("footer.product")}</h4>
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
                 <li key={link.label}>
@@ -87,7 +88,7 @@ const Footer = () => {
 
           {/* Company Links */}
           <div>
-            <h4 className="font-semibold text-primary-foreground mb-4">Company</h4>
+            <h4 className="font-semibold text-primary-foreground mb-4">{t("footer.company")}</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
@@ -104,7 +105,7 @@ const Footer = () => {
 
           {/* Resources Links */}
           <div>
-            <h4 className="font-semibold text-primary-foreground mb-4">Resources</h4>
+            <h4 className="font-semibold text-primary-foreground mb-4">{t("footer.resources")}</h4>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.label}>
@@ -124,26 +125,26 @@ const Footer = () => {
         <div className="pt-8 border-t border-primary-foreground/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-primary-foreground/40 text-sm">
-              © {currentYear} WINSO Energy. All rights reserved.
+              © {currentYear} {t("footer.copyright")}
             </p>
             <div className="flex gap-6 text-sm">
               <a
                 href="#"
                 className="text-primary-foreground/40 hover:text-primary-foreground transition-colors"
               >
-                Privacy Policy
+                {t("footer.privacy")}
               </a>
               <a
                 href="#"
                 className="text-primary-foreground/40 hover:text-primary-foreground transition-colors"
               >
-                Terms of Service
+                {t("footer.terms")}
               </a>
               <a
                 href="#"
                 className="text-primary-foreground/40 hover:text-primary-foreground transition-colors"
               >
-                Cookie Policy
+                {t("footer.cookies")}
               </a>
             </div>
           </div>

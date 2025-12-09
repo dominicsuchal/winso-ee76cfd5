@@ -2,10 +2,13 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import winsoLogo from "@/assets/winso-logo-transparent.png";
+import LanguageToggle from "@/components/LanguageToggle";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,10 +19,10 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { label: "About", href: "#about" },
-    { label: "Product", href: "#product" },
-    { label: "Why WINSO", href: "#why-winso" },
-    { label: "Team", href: "#team" },
+    { label: t("nav.about"), href: "#about" },
+    { label: t("nav.product"), href: "#product" },
+    { label: t("nav.whyWinso"), href: "#why-winso" },
+    { label: t("nav.team"), href: "#team" },
   ];
 
   return (
@@ -60,10 +63,11 @@ const Header = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* CTA Button & Language Toggle */}
+          <div className="hidden md:flex items-center gap-4">
+            <LanguageToggle />
             <Button variant="cta" size="default" asChild>
-              <a href="#contact">Contact Us</a>
+              <a href="#contact">{t("nav.contact")}</a>
             </Button>
           </div>
 
@@ -91,9 +95,12 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
+              <div className="py-2">
+                <LanguageToggle />
+              </div>
               <Button variant="cta" className="w-full mt-2" asChild>
                 <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
-                  Contact Us
+                  {t("nav.contact")}
                 </a>
               </Button>
             </div>

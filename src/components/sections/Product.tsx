@@ -1,40 +1,52 @@
 import { Check, Wind, Gauge, Battery, DollarSign, Shrink, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import winsoTurbine from "@/assets/winso-turbine.png";
-const features = [
-  {
-    icon: Wind,
-    title: "Hybrid Design",
-    description: "Wind-solar integration with solar cells built directly into the rotor blades.",
-  },
-  {
-    icon: Gauge,
-    title: "Superior Efficiency",
-    description: "Matches and exceeds horizontal turbine performance with electric boost capability.",
-  },
-  {
-    icon: Battery,
-    title: "Low-Wind Operation",
-    description: "Electric motor provides additional drive in low-wind conditions for consistent output.",
-  },
-  {
-    icon: Shrink,
-    title: "Space Efficient",
-    description: "No extra space required—solar integration means everything in one compact unit.",
-  },
-  {
-    icon: DollarSign,
-    title: "Cost-Effective",
-    description: "Not significantly more expensive than traditional vertical turbines.",
-  },
-  {
-    icon: Settings,
-    title: "Smart Safety",
-    description: "Movable blade supports prevent overspeeding while eliminating headwind resistance.",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Product = () => {
+  const { t } = useLanguage();
+
+  const features = [
+    {
+      icon: Wind,
+      title: t("product.feat1Title"),
+      description: t("product.feat1Desc"),
+    },
+    {
+      icon: Gauge,
+      title: t("product.feat2Title"),
+      description: t("product.feat2Desc"),
+    },
+    {
+      icon: Battery,
+      title: t("product.feat3Title"),
+      description: t("product.feat3Desc"),
+    },
+    {
+      icon: Shrink,
+      title: t("product.feat4Title"),
+      description: t("product.feat4Desc"),
+    },
+    {
+      icon: DollarSign,
+      title: t("product.feat5Title"),
+      description: t("product.feat5Desc"),
+    },
+    {
+      icon: Settings,
+      title: t("product.feat6Title"),
+      description: t("product.feat6Desc"),
+    },
+  ];
+
+  const benefits = [
+    t("product.benefit1"),
+    t("product.benefit2"),
+    t("product.benefit3"),
+    t("product.benefit4"),
+    t("product.benefit5"),
+  ];
+
   return (
     <section id="product" className="py-24 lg:py-32 gradient-hero relative overflow-hidden">
       {/* Decorative elements */}
@@ -47,16 +59,13 @@ const Product = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary-foreground/10 text-primary-foreground text-sm font-medium mb-6 backdrop-blur-sm">
-            Our Mission
+            {t("product.badge")}
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight mb-6">
-            The <span className="text-accent">WINSO</span> Turbine
+            {t("product.headline")} <span className="text-accent">{t("product.headlineHighlight")}</span> {t("product.headlineEnd")}
           </h2>
           <p className="text-lg text-primary-foreground/80">
-            Introducing our WINSO turbine—a hybrid wind-solar system that matches, and even exceeds, 
-            the performance of horizontal wind turbines. Solar cells integrated directly into the 
-            rotor blades power an electric motor that provides additional drive, meaning no extra 
-            space is required.
+            {t("product.intro")}
           </p>
         </div>
 
@@ -79,11 +88,11 @@ const Product = () => {
                 {/* Floating specs */}
                 <div className="absolute -right-8 top-1/4 px-4 py-2 rounded-lg bg-foreground/90 border border-accent/30 text-sm shadow-lg backdrop-blur-sm">
                   <span className="font-semibold text-accent">+30%</span>
-                  <span className="text-primary-foreground/70 ml-1">Output</span>
+                  <span className="text-primary-foreground/70 ml-1">{t("product.output")}</span>
                 </div>
                 <div className="absolute left-0 bottom-1/3 px-4 py-2 rounded-lg bg-foreground/90 border border-accent/30 text-sm shadow-lg backdrop-blur-sm">
-                  <span className="font-semibold text-accent">Hybrid</span>
-                  <span className="text-primary-foreground/70 ml-1">Technology</span>
+                  <span className="font-semibold text-accent">{t("product.hybrid")}</span>
+                  <span className="text-primary-foreground/70 ml-1">{t("product.technology")}</span>
                 </div>
               </div>
             </div>
@@ -92,27 +101,17 @@ const Product = () => {
           {/* Key Benefits */}
           <div className="order-1 lg:order-2">
             <h3 className="text-2xl font-bold text-primary-foreground mb-6">
-              Technically Well Thought Out
+              {t("product.techTitle")}
             </h3>
             <p className="text-primary-foreground/80 mb-4">
-              This electric boost also enables continuous energy production in low-wind conditions, 
-              contributing up to 30% of the total output and significantly increasing daily energy yield.
+              {t("product.techP1")}
             </p>
             <p className="text-primary-foreground/80 mb-8">
-              The wind blades are mounted on movable supports that respond to centrifugal forces. 
-              At high rotational speeds, they shift into a closed oval configuration, reducing wind 
-              impact on the blades. This prevents the system from overspeeding while eliminating 
-              headwind resistance—ensuring safer, more efficient operation overall.
+              {t("product.techP2")}
             </p>
             
             <ul className="space-y-4 mb-8">
-              {[
-                "Solar cells integrated directly into rotor blades",
-                "Electric motor for continuous low-wind operation",
-                "Movable supports prevent dangerous overspeeding",
-                "Closed oval configuration reduces wind impact at high speeds",
-                "Eliminates headwind resistance for safer operation",
-              ].map((benefit, index) => (
+              {benefits.map((benefit, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-4 h-4 text-accent" />
@@ -123,7 +122,7 @@ const Product = () => {
             </ul>
 
             <Button variant="cta" size="lg" asChild>
-              <a href="#contact">Request a Quote</a>
+              <a href="#contact">{t("product.requestQuote")}</a>
             </Button>
           </div>
         </div>

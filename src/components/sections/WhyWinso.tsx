@@ -1,39 +1,42 @@
 import { Zap, Shield, Wallet, Cpu, Users, Award } from "lucide-react";
-
-const benefits = [
-  {
-    icon: Zap,
-    title: "Maximum Efficiency",
-    description: "Our hybrid design captures more wind energy than traditional turbines, giving you more power from every breeze.",
-  },
-  {
-    icon: Shield,
-    title: "Built to Last",
-    description: "Engineered with premium materials and rigorous testing for 20+ years of reliable operation.",
-  },
-  {
-    icon: Wallet,
-    title: "Affordable Excellence",
-    description: "Competitive pricing without cutting corners. True value that pays for itself over time.",
-  },
-  {
-    icon: Cpu,
-    title: "Modern Engineering",
-    description: "Cutting-edge technology meets practical design. Smart features that simplify your life.",
-  },
-  {
-    icon: Users,
-    title: "Expert Team",
-    description: "Backed by decades of combined experience in business, sales, and electrical engineering.",
-  },
-  {
-    icon: Award,
-    title: "Quality Guaranteed",
-    description: "Every turbine is tested and certified to meet the highest European standards.",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const WhyWinso = () => {
+  const { t } = useLanguage();
+
+  const benefits = [
+    {
+      icon: Zap,
+      title: t("why.benefit1Title"),
+      description: t("why.benefit1Desc"),
+    },
+    {
+      icon: Shield,
+      title: t("why.benefit2Title"),
+      description: t("why.benefit2Desc"),
+    },
+    {
+      icon: Wallet,
+      title: t("why.benefit3Title"),
+      description: t("why.benefit3Desc"),
+    },
+    {
+      icon: Cpu,
+      title: t("why.benefit4Title"),
+      description: t("why.benefit4Desc"),
+    },
+    {
+      icon: Users,
+      title: t("why.benefit5Title"),
+      description: t("why.benefit5Desc"),
+    },
+    {
+      icon: Award,
+      title: t("why.benefit6Title"),
+      description: t("why.benefit6Desc"),
+    },
+  ];
+
   return (
     <section id="why-winso" className="py-24 lg:py-32 gradient-hero relative overflow-hidden">
       {/* Decorative elements */}
@@ -46,14 +49,13 @@ const WhyWinso = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary-foreground/10 text-primary-foreground text-sm font-medium mb-6 backdrop-blur-sm">
-            Why Choose Us
+            {t("why.badge")}
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight mb-6">
-            Why Choose <span className="text-accent">WINSO</span>?
+            {t("why.headline")} <span className="text-accent">{t("why.headlineHighlight")}</span>?
           </h2>
           <p className="text-lg text-primary-foreground/80">
-            When it comes to small wind power, WINSO delivers on every front. 
-            Here's what sets us apart from the competition.
+            {t("why.subheadline")}
           </p>
         </div>
 
@@ -80,13 +82,13 @@ const WhyWinso = () => {
         {/* Bottom CTA */}
         <div className="mt-16 text-center">
           <p className="text-primary-foreground/80 mb-6">
-            Ready to power your future with clean, efficient wind energy?
+            {t("why.cta")}
           </p>
           <a
             href="#contact"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-accent text-accent-foreground font-semibold shadow-cta hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
           >
-            Get Started Today
+            {t("why.ctaButton")}
           </a>
         </div>
       </div>

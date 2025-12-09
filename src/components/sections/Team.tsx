@@ -1,15 +1,25 @@
 import { Briefcase, TrendingUp, Zap, ShoppingCart, Megaphone, Factory } from "lucide-react";
-
-const expertise = [
-  { icon: Briefcase, label: "Business Strategy" },
-  { icon: TrendingUp, label: "Sales & Growth" },
-  { icon: Zap, label: "Electrical Engineering" },
-  { icon: ShoppingCart, label: "Purchasing" },
-  { icon: Megaphone, label: "Marketing" },
-  { icon: Factory, label: "Production" },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Team = () => {
+  const { t } = useLanguage();
+
+  const expertise = [
+    { icon: Briefcase, label: t("team.exp1") },
+    { icon: TrendingUp, label: t("team.exp2") },
+    { icon: Zap, label: t("team.exp3") },
+    { icon: ShoppingCart, label: t("team.exp4") },
+    { icon: Megaphone, label: t("team.exp5") },
+    { icon: Factory, label: t("team.exp6") },
+  ];
+
+  const areas = [
+    t("team.area1"),
+    t("team.area2"),
+    t("team.area3"),
+    t("team.area4"),
+  ];
+
   return (
     <section id="team" className="py-24 lg:py-32 gradient-hero relative overflow-hidden">
       {/* Decorative elements */}
@@ -23,29 +33,26 @@ const Team = () => {
           {/* Content */}
           <div>
             <span className="inline-block px-4 py-1.5 rounded-full bg-primary-foreground/10 text-primary-foreground text-sm font-medium mb-6 backdrop-blur-sm">
-              Our Team
+              {t("team.badge")}
             </span>
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight mb-6">
-              Powered by{" "}
-              <span className="text-accent">Experience</span>
+              {t("team.headline")}{" "}
+              <span className="text-accent">{t("team.headlineHighlight")}</span>
             </h2>
             
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-6">
-              The WINSO team has many years of experience in business and sales, as well as 
-              extensive knowledge in electrical engineering. Our combined expertise positions 
-              us uniquely to revolutionize the small wind power market.
+              {t("team.p1")}
             </p>
             
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-10">
-              We plan to add more experienced professionals to the team in purchasing, sales, 
-              production, and marketing to ensure the startup's success.
+              {t("team.p2")}
             </p>
 
             {/* Expertise Tags */}
             <div>
               <h4 className="text-sm font-semibold text-primary-foreground/60 uppercase tracking-wider mb-4">
-                Areas of Expertise
+                {t("team.expertise")}
               </h4>
               <div className="flex flex-wrap gap-3">
                 {expertise.map((item) => (
@@ -68,24 +75,19 @@ const Team = () => {
               {/* Team Stats */}
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="text-center p-6 rounded-2xl bg-primary-foreground/5 border border-primary-foreground/10">
-                  <div className="text-4xl font-bold text-accent mb-2">Years</div>
-                  <div className="text-sm text-primary-foreground/70">Combined<br/>Experience</div>
+                  <div className="text-4xl font-bold text-accent mb-2">{t("team.years")}</div>
+                  <div className="text-sm text-primary-foreground/70">{t("team.combined")}<br/>{t("team.experience")}</div>
                 </div>
                 <div className="text-center p-6 rounded-2xl bg-primary-foreground/5 border border-primary-foreground/10">
                   <div className="text-4xl font-bold text-accent mb-2">3+</div>
-                  <div className="text-sm text-primary-foreground/70">Industries<br/>Mastered</div>
+                  <div className="text-sm text-primary-foreground/70">{t("team.industries")}<br/>{t("team.mastered")}</div>
                 </div>
               </div>
 
               {/* Growth Areas */}
-              <h4 className="font-semibold text-primary-foreground mb-4">Expanding Capabilities</h4>
+              <h4 className="font-semibold text-primary-foreground mb-4">{t("team.expanding")}</h4>
               <div className="space-y-3">
-                {[
-                  "Purchasing & Supply Chain",
-                  "Sales & Business Development",
-                  "Production & Manufacturing",
-                  "Marketing & Brand Growth",
-                ].map((value, index) => (
+                {areas.map((value, index) => (
                   <div
                     key={index}
                     className="flex items-center gap-3 p-3 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10"

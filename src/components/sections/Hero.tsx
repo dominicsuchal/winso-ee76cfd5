@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Wind, ArrowRight, Zap } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Animated Background */}
@@ -32,15 +35,15 @@ const Hero = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 mb-8 animate-fade-up">
             <Zap className="w-4 h-4 text-accent" />
             <span className="text-sm font-medium text-primary-foreground">
-              Hybrid is Simply Better
+              {t("hero.badge")}
             </span>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-up delay-100">
-            WINSO –{" "}
+            {t("hero.headline")}{" "}
             <span className="relative">
-              Hybrid is Simply Better
+              {t("hero.headlineHighlight")}
               <svg
                 className="absolute -bottom-2 left-0 w-full"
                 viewBox="0 0 300 12"
@@ -59,21 +62,19 @@ const Hero = () => {
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-10 max-w-2xl animate-fade-up delay-200">
-            At WINSO, we aim to make renewable energy simpler, smarter, and more efficient. 
-            Our turbine combines wind and solar power into one hybrid system that produces 
-            stable energy even when weather conditions change.
+            {t("hero.subheadline")}
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-300">
             <Button variant="cta" size="xl" asChild>
               <a href="#product">
-                Learn More
+                {t("hero.learnMore")}
                 <ArrowRight className="w-5 h-5" />
               </a>
             </Button>
             <Button size="xl" asChild className="bg-transparent border-2 border-cta text-cta hover:bg-cta hover:text-cta-foreground transition-all">
-              <a href="#contact">Contact Us</a>
+              <a href="#contact">{t("hero.contactUs")}</a>
             </Button>
           </div>
 
@@ -84,19 +85,19 @@ const Hero = () => {
                 <div className="w-12 h-12 rounded-xl bg-primary-foreground/10 flex items-center justify-center">
                   <span className="text-xl font-bold text-primary-foreground">5+</span>
                 </div>
-                <span className="text-sm">Years of<br />Experience</span>
+                <span className="text-sm">{t("hero.yearsExp")}<br />{t("hero.experience")}</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-xl bg-primary-foreground/10 flex items-center justify-center">
                   <span className="text-xl font-bold text-primary-foreground">100%</span>
                 </div>
-                <span className="text-sm">Clean<br />Energy</span>
+                <span className="text-sm">{t("hero.cleanEnergy")}<br />{t("hero.energy")}</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-xl bg-primary-foreground/10 flex items-center justify-center">
                   <span className="text-xl font-bold text-primary-foreground">EU</span>
                 </div>
-                <span className="text-sm">Designed &<br />Manufactured</span>
+                <span className="text-sm">{t("hero.designed")}<br />{t("hero.manufactured")}</span>
               </div>
             </div>
           </div>

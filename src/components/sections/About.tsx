@@ -1,21 +1,24 @@
 import { Globe, Home, Sailboat, TreePine, Tent, Truck, Sun, Wind, Cpu } from "lucide-react";
-
-const applications = [
-  { icon: Home, label: "Private Households" },
-  { icon: TreePine, label: "Garden Houses" },
-  { icon: Globe, label: "Island Applications" },
-  { icon: Tent, label: "Vacation Homes" },
-  { icon: Truck, label: "Mobile Homes" },
-  { icon: Sailboat, label: "Boats & Yachts" },
-];
-
-const features = [
-  { icon: Sun, label: "Solar-powered motor support" },
-  { icon: Wind, label: "Flexible solar blades" },
-  { icon: Cpu, label: "Intelligent control systems" },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const About = () => {
+  const { t } = useLanguage();
+
+  const applications = [
+    { icon: Home, label: t("about.app1") },
+    { icon: TreePine, label: t("about.app2") },
+    { icon: Globe, label: t("about.app3") },
+    { icon: Tent, label: t("about.app4") },
+    { icon: Truck, label: t("about.app5") },
+    { icon: Sailboat, label: t("about.app6") },
+  ];
+
+  const features = [
+    { icon: Sun, label: t("about.feature1") },
+    { icon: Wind, label: t("about.feature2") },
+    { icon: Cpu, label: t("about.feature3") },
+  ];
+
   return (
     <section id="about" className="py-24 lg:py-32 gradient-hero relative overflow-hidden">
       {/* Decorative elements */}
@@ -29,29 +32,24 @@ const About = () => {
           {/* Content */}
           <div>
             <span className="inline-block px-4 py-1.5 rounded-full bg-primary-foreground/10 text-primary-foreground text-sm font-medium mb-6 backdrop-blur-sm">
-              About WINSO
+              {t("about.badge")}
             </span>
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight mb-6">
-              Technology That{" "}
-              <span className="text-accent">Adapts</span>
+              {t("about.headline")}{" "}
+              <span className="text-accent">{t("about.headlineHighlight")}</span>
             </h2>
             
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-6">
-              At WINSO, we aim to make renewable energy simpler, smarter, and more efficient. 
-              Our turbine combines wind and solar power into one hybrid system that produces 
-              stable energy even when weather conditions change.
+              {t("about.p1")}
             </p>
             
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-6">
-              We believe the future of energy lies in technology that adapts, not waits. 
-              That's why WINSO uses solar-powered motor support, flexible solar blades, 
-              and intelligent control systems to keep performance high at all times.
+              {t("about.p2")}
             </p>
 
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-10">
-              Our vision is clear: deliver reliable clean energy anywhere, with a system 
-              that works day and night — and moves renewable power a step forward.
+              {t("about.p3")}
             </p>
 
             {/* Key Features */}
@@ -73,7 +71,7 @@ const About = () => {
             <div className="absolute -inset-4 bg-gradient-to-br from-accent/10 to-primary-foreground/5 rounded-3xl blur-xl" />
             <div className="relative bg-foreground/50 backdrop-blur-sm rounded-3xl p-8 lg:p-10 border border-primary-foreground/10">
               <h3 className="text-xl font-semibold text-primary-foreground mb-6">
-                Perfect for Every Application
+                {t("about.appTitle")}
               </h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 {applications.map((app, index) => (
