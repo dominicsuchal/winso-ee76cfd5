@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Wind, ArrowRight, Zap } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import winsoLogo from "@/assets/winso-logo-transparent.png";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -31,12 +32,21 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 mb-8 animate-fade-up">
-            <Zap className="w-4 h-4 text-accent" />
-            <span className="text-sm font-medium text-primary-foreground">
-              {t("hero.badge")}
-            </span>
+          {/* Logo Badge */}
+          <div className="inline-flex items-center gap-4 mb-8 animate-fade-up">
+            <div className="bg-cta rounded-xl p-3 shadow-lg">
+              <img 
+                src={winsoLogo} 
+                alt="WINSO - Hybrid is simply better" 
+                className="h-12 w-auto"
+              />
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20">
+              <Zap className="w-4 h-4 text-accent" />
+              <span className="text-sm font-medium text-primary-foreground">
+                {t("hero.badge")}
+              </span>
+            </div>
           </div>
 
           {/* Main Headline */}
