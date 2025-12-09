@@ -35,8 +35,8 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 lg:px-8">
         <nav className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
+          {/* Logo with slogan - centered on mobile */}
+          <a href="#" className="flex items-center gap-3 group absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
             <div className="bg-cta rounded-xl p-2 flex items-center justify-center">
               <img 
                 src={winsoTurbineIcon} 
@@ -44,6 +44,9 @@ const Header = () => {
                 className="h-10 w-10 object-contain"
               />
             </div>
+            <span className="text-primary-foreground font-semibold text-sm md:text-base whitespace-nowrap">
+              Hybrid is Simply Better
+            </span>
           </a>
 
           {/* Desktop Navigation */}
