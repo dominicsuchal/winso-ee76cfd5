@@ -38,9 +38,9 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-up delay-100">
-            WINSO – The Future of{" "}
+            WINSO –{" "}
             <span className="relative">
-              Small Wind Power
+              Hybrid is Simply Better
               <svg
                 className="absolute -bottom-2 left-0 w-full"
                 viewBox="0 0 300 12"
