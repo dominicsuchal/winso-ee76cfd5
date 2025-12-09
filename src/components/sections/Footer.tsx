@@ -39,7 +39,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <a href="#" className="flex items-center gap-2 mb-6">
-              <div className="bg-accent rounded-lg p-2">
+              <div className="bg-cta rounded-lg p-2">
                 <img 
                   src={winsoLogo} 
                   alt="WINSO - Hybrid is simply better" 
