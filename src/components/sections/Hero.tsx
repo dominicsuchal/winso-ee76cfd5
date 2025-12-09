@@ -35,7 +35,7 @@ const Hero = () => {
             <img 
               src={winsoLogo} 
               alt="WINSO" 
-              className="h-40 w-auto brightness-0 invert drop-shadow-[0_0_35px_hsl(var(--cta))] drop-shadow-[0_0_70px_hsl(var(--cta)/0.5)]"
+              className="h-40 w-40 object-contain brightness-0 invert drop-shadow-[0_0_35px_hsl(var(--cta))] drop-shadow-[0_0_70px_hsl(var(--cta)/0.5)]"
             />
           </div>
         </div>
