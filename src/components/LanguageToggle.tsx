@@ -25,6 +25,16 @@ const LanguageToggle = () => {
       >
         DE
       </button>
+      <button
+        onClick={() => setLanguage("sk")}
+        className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${
+          language === "sk"
+            ? "bg-cta text-cta-foreground"
+            : "text-primary-foreground/70 hover:text-primary-foreground"
+        }`}
+      >
+        SK
+      </button>
     </div>
   );
 };
