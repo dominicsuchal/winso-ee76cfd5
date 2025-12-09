@@ -38,7 +38,7 @@ const Header = () => {
               <img 
                 src={winsoLogo} 
                 alt="WINSO - Hybrid is simply better" 
-                className="h-8 w-auto invert"
+                className="h-8 w-auto"
               />
             </div>
           </a>
