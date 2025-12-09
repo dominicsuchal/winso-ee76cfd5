@@ -44,7 +44,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto lg:mx-0">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 mb-8 animate-fade-up mx-auto lg:mx-0">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 mb-8 animate-fade-up mx-auto lg:mx-0 mt-16 lg:mt-0">
             <Zap className="w-4 h-4 text-accent" />
             <span className="text-sm font-medium text-primary-foreground">
               {t("hero.badge")}
