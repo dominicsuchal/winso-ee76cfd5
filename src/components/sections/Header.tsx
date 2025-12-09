@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import winsoLogo from "@/assets/winso-logo-transparent.png";
+import winsoTurbineIcon from "@/assets/winso-turbine-icon.jpg";
 import LanguageToggle from "@/components/LanguageToggle";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -37,11 +37,12 @@ const Header = () => {
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="bg-cta rounded-lg p-2">
+            <div className="relative">
+              <div className="absolute inset-0 bg-cta/30 blur-lg rounded-full" />
               <img 
-                src={winsoLogo} 
+                src={winsoTurbineIcon} 
                 alt="WINSO - Hybrid is simply better" 
-                className="h-8 w-auto"
+                className="h-10 w-auto relative z-10 brightness-0 invert drop-shadow-[0_0_8px_hsl(var(--cta))]"
               />
             </div>
           </a>
