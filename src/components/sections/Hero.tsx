@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Wind, ArrowRight, Zap } from "lucide-react";
+import { ArrowRight, Zap } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import winsoLogo from "@/assets/winso-logo-transparent.png";
 
@@ -17,36 +17,38 @@ const Hero = () => {
         <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-primary-foreground/10 rounded-full blur-3xl animate-float delay-300" />
       </div>
 
-      {/* Floating Turbine Icon */}
+      {/* Floating Logo with Green Glow */}
       <div className="absolute right-10 lg:right-20 top-1/2 -translate-y-1/2 hidden lg:block">
         <div className="relative">
-          <div className="w-64 h-64 rounded-full border-2 border-primary-foreground/10 flex items-center justify-center animate-spin-slow">
-            <div className="absolute w-48 h-48 rounded-full border border-primary-foreground/10" />
-            <div className="absolute w-32 h-32 rounded-full border border-primary-foreground/10" />
+          {/* Green glow effect rings */}
+          <div className="absolute inset-0 w-72 h-72 rounded-full bg-cta/20 blur-3xl animate-pulse" />
+          <div className="absolute inset-4 w-64 h-64 rounded-full bg-cta/30 blur-2xl" />
+          
+          {/* Rotating border rings */}
+          <div className="w-72 h-72 rounded-full border-2 border-cta/30 flex items-center justify-center animate-spin-slow">
+            <div className="absolute w-56 h-56 rounded-full border border-cta/20" />
+            <div className="absolute w-40 h-40 rounded-full border border-cta/30" />
           </div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <Wind className="w-16 h-16 text-primary-foreground/40" />
+          
+          {/* Logo in center with white filter and green glow */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-6">
+            <img 
+              src={winsoLogo} 
+              alt="WINSO" 
+              className="h-24 w-auto brightness-0 invert drop-shadow-[0_0_25px_hsl(var(--cta))] drop-shadow-[0_0_50px_hsl(var(--cta)/0.5)]"
+            />
           </div>
         </div>
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl">
-          {/* Logo Badge */}
-          <div className="inline-flex items-center gap-4 mb-8 animate-fade-up">
-            <div className="bg-cta rounded-xl p-3 shadow-lg">
-              <img 
-                src={winsoLogo} 
-                alt="WINSO - Hybrid is simply better" 
-                className="h-12 w-auto"
-              />
-            </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20">
-              <Zap className="w-4 h-4 text-accent" />
-              <span className="text-sm font-medium text-primary-foreground">
-                {t("hero.badge")}
-              </span>
-            </div>
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 mb-8 animate-fade-up">
+            <Zap className="w-4 h-4 text-accent" />
+            <span className="text-sm font-medium text-primary-foreground">
+              {t("hero.badge")}
+            </span>
           </div>
 
           {/* Main Headline */}
