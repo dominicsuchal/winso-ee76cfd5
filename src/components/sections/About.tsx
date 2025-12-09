@@ -20,39 +20,44 @@ const About = () => {
           {/* Content */}
           <div>
             <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-sm font-medium mb-6">
-              About WINSO
+              Our Mission
             </span>
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
-              Making Wind Power{" "}
-              <span className="gradient-text">Accessible</span> for Everyone
+              Hybrid Wind-Solar{" "}
+              <span className="gradient-text">Innovation</span>
             </h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              The market for small wind turbines is growing rapidly as more people seek 
-              independence from traditional power grids. WINSO is at the forefront of this 
-              revolution, making efficient wind power technology accessible to everyone.
+              Introducing our WINSO turbine—a hybrid wind-solar system that matches, and even exceeds, 
+              the performance of horizontal wind turbines. Solar cells integrated directly into the 
+              rotor blades power an electric motor that provides additional drive, meaning no extra 
+              space is required.
             </p>
             
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              This electric boost enables continuous energy production in low-wind conditions, 
+              contributing up to 30% of the total output and significantly increasing daily energy yield.
+            </p>
+
             <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-              Our mission is simple: provide reliable, cost-effective wind energy solutions 
-              for private use—whether you're powering a home, a boat, or an off-grid cabin 
-              in the mountains.
+              The market for small wind turbines is steadily growing and offers enormous potential. 
+              We are convinced that WINSO will play a leading role in this market.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6">
               <div className="text-center p-4 rounded-2xl bg-card shadow-soft">
-                <div className="text-3xl font-bold gradient-text mb-1">2030</div>
-                <div className="text-sm text-muted-foreground">Market Growth<br/>Projection</div>
-              </div>
-              <div className="text-center p-4 rounded-2xl bg-card shadow-soft">
-                <div className="text-3xl font-bold gradient-text mb-1">45%</div>
-                <div className="text-sm text-muted-foreground">More<br/>Efficient</div>
+                <div className="text-3xl font-bold gradient-text mb-1">30%</div>
+                <div className="text-sm text-muted-foreground">Extra<br/>Output</div>
               </div>
               <div className="text-center p-4 rounded-2xl bg-card shadow-soft">
                 <div className="text-3xl font-bold gradient-text mb-1">24/7</div>
                 <div className="text-sm text-muted-foreground">Power<br/>Generation</div>
+              </div>
+              <div className="text-center p-4 rounded-2xl bg-card shadow-soft">
+                <div className="text-3xl font-bold gradient-text mb-1">0</div>
+                <div className="text-sm text-muted-foreground">Extra Space<br/>Required</div>
               </div>
             </div>
           </div>

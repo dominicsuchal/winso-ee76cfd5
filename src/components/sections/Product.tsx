@@ -4,33 +4,33 @@ import { Button } from "@/components/ui/button";
 const features = [
   {
     icon: Wind,
-    title: "Hybrid/Vertical Design",
-    description: "Advanced aerodynamic design captures wind from all directions for maximum efficiency.",
+    title: "Hybrid Design",
+    description: "Wind-solar integration with solar cells built directly into the rotor blades.",
   },
   {
     icon: Gauge,
     title: "Superior Efficiency",
-    description: "Up to 45% more efficient than traditional vertical turbines with the same footprint.",
+    description: "Matches and exceeds horizontal turbine performance with electric boost capability.",
   },
   {
     icon: Battery,
-    title: "Reliable Power",
-    description: "Consistent energy generation even in variable wind conditions.",
+    title: "Low-Wind Operation",
+    description: "Electric motor provides additional drive in low-wind conditions for consistent output.",
   },
   {
     icon: Shrink,
-    title: "Compact Size",
-    description: "Space-efficient design perfect for residential and mobile applications.",
+    title: "Space Efficient",
+    description: "No extra space required—solar integration means everything in one compact unit.",
   },
   {
     icon: DollarSign,
     title: "Cost-Effective",
-    description: "Competitive pricing without compromising on quality or performance.",
+    description: "Not significantly more expensive than traditional vertical turbines.",
   },
   {
     icon: Settings,
-    title: "Low Maintenance",
-    description: "Engineered for durability with minimal upkeep requirements.",
+    title: "Smart Safety",
+    description: "Movable blade supports prevent overspeeding while eliminating headwind resistance.",
   },
 ];
 
@@ -47,14 +47,15 @@ const Product = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-            Our Product
+            Technically Well Thought Out
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
             The WINSO Turbine
           </h2>
           <p className="text-lg text-muted-foreground">
-            A revolutionary hybrid/vertical wind turbine designed for efficiency, 
-            reliability, and accessibility—all at a competitive price point.
+            The wind blades are mounted on movable supports that respond to centrifugal forces. 
+            At high rotational speeds, they shift into a closed oval configuration, reducing wind 
+            impact on the blades—ensuring safer, more efficient operation overall.
           </p>
         </div>
 
@@ -64,7 +65,7 @@ const Product = () => {
           <div className="relative order-2 lg:order-1">
             <div className="aspect-square max-w-md mx-auto relative">
               {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-3xl" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl" />
               
               {/* Turbine representation */}
               <div className="relative h-full flex items-center justify-center">
@@ -83,11 +84,11 @@ const Product = () => {
 
                   {/* Floating specs */}
                   <div className="absolute -right-4 top-1/4 px-3 py-2 rounded-lg bg-card shadow-card text-sm">
-                    <span className="font-semibold text-primary">500W</span>
+                    <span className="font-semibold text-primary">+30%</span>
                     <span className="text-muted-foreground ml-1">Output</span>
                   </div>
                   <div className="absolute -left-4 bottom-1/4 px-3 py-2 rounded-lg bg-card shadow-card text-sm">
-                    <span className="font-semibold text-accent">Silent</span>
+                    <span className="font-semibold text-accent">Safe</span>
                     <span className="text-muted-foreground ml-1">Operation</span>
                   </div>
                 </div>
@@ -101,18 +102,17 @@ const Product = () => {
               Why Our Hybrid Design Stands Out
             </h3>
             <p className="text-muted-foreground mb-8">
-              The WINSO turbine combines the best of vertical and horizontal axis technologies, 
-              resulting in a system that's not significantly more expensive than traditional 
-              vertical turbines—but far more efficient.
+              The WINSO turbine is not significantly more expensive than a traditional vertical 
+              turbine, yet delivers hybrid wind-solar performance that exceeds expectations.
             </p>
             
             <ul className="space-y-4 mb-8">
               {[
-                "Captures wind from any direction without repositioning",
-                "Lower noise levels than horizontal axis turbines",
-                "Safer for birds and local wildlife",
-                "Easy installation with minimal structural requirements",
-                "Built for 20+ years of reliable operation",
+                "Solar cells integrated directly into rotor blades",
+                "Electric motor for continuous low-wind operation",
+                "Movable supports prevent dangerous overspeeding",
+                "Closed oval configuration reduces wind impact at high speeds",
+                "Eliminates headwind resistance for safer operation",
               ].map((benefit, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">

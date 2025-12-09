@@ -4,22 +4,22 @@ const pillars = [
   {
     icon: Factory,
     title: "In-House Manufacturing",
-    description: "Full control over production processes ensures quality while keeping costs competitive.",
+    description: "Cost-effective production through complete manufacturing control.",
   },
   {
     icon: Package,
     title: "Lean Product Line",
-    description: "Focused initial offering allows for operational efficiency and continuous improvement.",
+    description: "Initially lean offering for efficiency and lower costs than comparable models.",
   },
   {
     icon: TrendingUp,
     title: "Scalable Model",
-    description: "Designed to grow with demand while maintaining profitability at every stage.",
+    description: "Simple structure designed to scale with growing market demand.",
   },
   {
     icon: Repeat,
     title: "Recurring Revenue",
-    description: "One-time sales foundation with potential for service contracts and expansions.",
+    description: "One-time sales foundation with stable, recurring revenue and growth potential.",
   },
 ];
 
@@ -38,14 +38,20 @@ const BusinessModel = () => {
             </span>
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
-              Simple, Scalable,{" "}
-              <span className="gradient-text">Sustainable</span>
+              Simple and{" "}
+              <span className="gradient-text">Scalable</span>
             </h2>
             
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              Our business model is simple and scalable. Our goal is to manufacture wind turbines 
+              cost-effectively through in-house production. The WINSO turbine is not significantly 
+              more expensive than a traditional vertical turbine.
+            </p>
+
             <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-              WINSO's business model is built for growth. By controlling our manufacturing 
-              process and focusing on a streamlined product line, we deliver exceptional 
-              value while building a sustainable, profitable enterprise.
+              Through an initially lean offering, we can provide our product more efficiently 
+              and at a lower cost than comparable performance models on the market. Focusing on 
+              one-time sales allows us to achieve stable and recurring revenue with growth potential.
             </p>
 
             {/* Pillars */}
@@ -118,12 +124,12 @@ const BusinessModel = () => {
               {/* Key Metrics */}
               <div className="grid grid-cols-2 gap-4 mt-10">
                 <div className="text-center p-4 rounded-xl bg-secondary/50">
-                  <div className="text-2xl font-bold text-primary mb-1">3x</div>
-                  <div className="text-xs text-muted-foreground">Growth Target<br/>by 2027</div>
+                  <div className="text-2xl font-bold text-primary mb-1">Cost</div>
+                  <div className="text-xs text-muted-foreground">Effective<br/>Production</div>
                 </div>
                 <div className="text-center p-4 rounded-xl bg-secondary/50">
-                  <div className="text-2xl font-bold text-accent mb-1">35%</div>
-                  <div className="text-xs text-muted-foreground">Gross Margin<br/>Target</div>
+                  <div className="text-2xl font-bold text-accent mb-1">Lean</div>
+                  <div className="text-xs text-muted-foreground">Initial<br/>Offering</div>
                 </div>
               </div>
             </div>
