@@ -26,16 +26,14 @@ const Team = () => {
             </h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              The WINSO team brings together decades of combined expertise in business 
-              development, sales strategy, and electrical engineering. Our founders have 
-              successfully built and scaled businesses, and now we're channeling that 
-              experience into revolutionizing small wind power.
+              The WINSO team has many years of experience in business and sales, as well as 
+              extensive knowledge in electrical engineering. Our combined expertise positions 
+              us uniquely to revolutionize the small wind power market.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-              As we grow, we're expanding our capabilities across purchasing, production, 
-              marketing, and customer success—ensuring every aspect of WINSO operates 
-              at the highest level.
+              We plan to add more experienced professionals to the team in purchasing, sales, 
+              production, and marketing to ensure the startup's success.
             </p>
 
             {/* Expertise Tags */}
@@ -64,23 +62,23 @@ const Team = () => {
               {/* Team Stats */}
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="text-center p-6 rounded-2xl bg-secondary/50">
-                  <div className="text-4xl font-bold gradient-text mb-2">15+</div>
-                  <div className="text-sm text-muted-foreground">Years Combined<br/>Experience</div>
+                  <div className="text-4xl font-bold gradient-text mb-2">Years</div>
+                  <div className="text-sm text-muted-foreground">Combined<br/>Experience</div>
                 </div>
                 <div className="text-center p-6 rounded-2xl bg-secondary/50">
-                  <div className="text-4xl font-bold gradient-text mb-2">3</div>
+                  <div className="text-4xl font-bold gradient-text mb-2">3+</div>
                   <div className="text-sm text-muted-foreground">Industries<br/>Mastered</div>
                 </div>
               </div>
 
-              {/* Core Values */}
-              <h4 className="font-semibold text-foreground mb-4">Our Core Values</h4>
+              {/* Growth Areas */}
+              <h4 className="font-semibold text-foreground mb-4">Expanding Capabilities</h4>
               <div className="space-y-3">
                 {[
-                  "Innovation in everything we do",
-                  "Customer success is our success",
-                  "Sustainability without compromise",
-                  "Excellence through collaboration",
+                  "Purchasing & Supply Chain",
+                  "Sales & Business Development",
+                  "Production & Manufacturing",
+                  "Marketing & Brand Growth",
                 ].map((value, index) => (
                   <div
                     key={index}
