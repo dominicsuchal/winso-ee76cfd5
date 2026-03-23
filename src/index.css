@@ -118,7 +118,6 @@
     @apply text-foreground font-sans antialiased;
     font-family: 'Plus Jakarta Sans', sans-serif;
     background: linear-gradient(135deg, hsl(152 60% 92%) 0%, hsl(148 40% 95%) 40%, hsl(0 0% 98%) 100%);
-    background-attachment: fixed;
     min-height: 100vh;
   }
 
