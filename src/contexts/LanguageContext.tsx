@@ -48,6 +48,12 @@ const translations: Record<Language, Record<string, string>> = {
     "about.app4": "Vacation Homes",
     "about.app5": "Mobile Homes",
     "about.app6": "Boats & Yachts",
+    "about.appDesc1": "Power your home, reduce electricity costs, and stay independent with a stable hybrid wind-solar system.",
+    "about.appDesc2": "Run lighting, tools, and small appliances with an off-grid system that generates and stores its own energy.",
+    "about.appDesc3": "Stay fully independent in remote areas with a hybrid turbine designed for continuous, reliable energy generation.",
+    "about.appDesc4": "Keep your holiday home powered year-round with a low-maintenance system that works in changing conditions.",
+    "about.appDesc5": "Produce clean energy on the go with a compact system built for mobility and efficient battery charging.",
+    "about.appDesc6": "Power onboard systems using wind and solar energy combined in a space-efficient hybrid solution.",
 
     // Product
     "product.badge": "Our Mission",
@@ -230,6 +236,12 @@ const translations: Record<Language, Record<string, string>> = {
     "about.app4": "Ferienhäuser",
     "about.app5": "Wohnmobile",
     "about.app6": "Boote & Yachten",
+    "about.appDesc1": "Versorgen Sie Ihr Zuhause mit Strom, senken Sie die Stromkosten und bleiben Sie unabhängig mit einem stabilen hybriden Wind-Solar-System.",
+    "about.appDesc2": "Betreiben Sie Beleuchtung, Werkzeuge und kleine Geräte mit einem netzunabhängigen System, das seine eigene Energie erzeugt und speichert.",
+    "about.appDesc3": "Bleiben Sie in abgelegenen Gebieten vollständig unabhängig mit einer Hybridturbine, die für kontinuierliche, zuverlässige Energieerzeugung ausgelegt ist.",
+    "about.appDesc4": "Halten Sie Ihr Ferienhaus das ganze Jahr über mit Strom versorgt – mit einem wartungsarmen System, das bei wechselnden Bedingungen funktioniert.",
+    "about.appDesc5": "Erzeugen Sie unterwegs saubere Energie mit einem kompakten System, das für Mobilität und effizientes Laden von Batterien gebaut ist.",
+    "about.appDesc6": "Versorgen Sie Bordsysteme mit Wind- und Solarenergie in einer platzsparenden Hybridlösung.",
 
     // Product
     "product.badge": "Unsere Mission",
@@ -412,6 +424,12 @@ const translations: Record<Language, Record<string, string>> = {
     "about.app4": "Rekreačné domy",
     "about.app5": "Mobilné domy",
     "about.app6": "Lode a jachty",
+    "about.appDesc1": "Napájajte svoj domov, znížte náklady na elektrickú energiu a zostaňte nezávislí so stabilným hybridným veterno-solárnym systémom.",
+    "about.appDesc2": "Prevádzkujte osvetlenie, nástroje a malé spotrebiče s off-grid systémom, ktorý generuje a ukladá vlastnú energiu.",
+    "about.appDesc3": "Zostaňte plne nezávislí v odľahlých oblastiach s hybridnou turbínou navrhnutou pre nepretržitú, spoľahlivú výrobu energie.",
+    "about.appDesc4": "Udržujte svoju dovolenkovú chatu napájanú celý rok s nenáročným systémom, ktorý funguje v meniacich sa podmienkach.",
+    "about.appDesc5": "Vyrábajte čistú energiu na cestách s kompaktným systémom vytvoreným pre mobilitu a efektívne nabíjanie batérií.",
+    "about.appDesc6": "Napájajte palubné systémy pomocou veternej a solárnej energie v priestorovo efektívnom hybridnom riešení.",
 
     // Product
     "product.badge": "Naša misia",
