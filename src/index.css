@@ -6,47 +6,47 @@
 
 @layer base {
   :root {
-    --background: 152 81% 96%;
-    --foreground: 0 0% 15%;
+    --background: 152 70% 96%;
+    --foreground: 150 30% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 15%;
+    --card-foreground: 150 30% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 15%;
+    --popover-foreground: 150 30% 10%;
 
-    --primary: 142 70% 40%;
+    --primary: 152 82% 35%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 142 30% 94%;
-    --secondary-foreground: 0 0% 15%;
+    --secondary: 142 40% 90%;
+    --secondary-foreground: 150 30% 10%;
 
-    --muted: 210 14% 93%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 142 25% 91%;
+    --muted-foreground: 150 15% 35%;
 
-    --accent: 142 70% 40%;
+    --accent: 152 82% 35%;
     --accent-foreground: 0 0% 100%;
 
-    --cta: 142 70% 40%;
+    --cta: 152 82% 35%;
     --cta-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 88%;
-    --input: 0 0% 88%;
-    --ring: 142 70% 40%;
+    --border: 142 30% 85%;
+    --input: 142 30% 85%;
+    --ring: 152 82% 35%;
 
     --radius: 0.75rem;
 
-    --gradient-hero: linear-gradient(160deg, hsl(152 80% 96%) 0%, hsl(142 60% 93%) 25%, hsl(160 40% 97%) 50%, hsl(142 70% 94%) 75%, hsl(152 80% 96%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(142 40% 98%) 100%);
-    --gradient-text: linear-gradient(135deg, hsl(0 0% 15%) 0%, hsl(142 70% 35%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(160 70% 92%) 0%, hsl(142 80% 88%) 30%, hsl(152 60% 94%) 60%, hsl(140 70% 90%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(142 50% 96%) 100%);
+    --gradient-text: linear-gradient(135deg, hsl(150 30% 10%) 0%, hsl(152 82% 30%) 100%);
     
-    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.08);
-    --shadow-card: 0 8px 30px -8px hsl(0 0% 0% / 0.1);
-    --shadow-glow: 0 0 40px hsl(142 70% 40% / 0.15);
-    --shadow-cta: 0 4px 20px -4px hsl(142 70% 40% / 0.3);
+    --shadow-soft: 0 4px 20px -4px hsl(142 40% 30% / 0.1);
+    --shadow-card: 0 8px 30px -8px hsl(142 40% 30% / 0.12);
+    --shadow-glow: 0 0 50px hsl(152 82% 35% / 0.25);
+    --shadow-cta: 0 4px 25px -4px hsl(152 82% 35% / 0.4);
 
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 0 0% 15%;
@@ -117,7 +117,11 @@
   body {
     @apply text-foreground font-sans antialiased;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background: linear-gradient(180deg, hsl(152 80% 96%) 0%, hsl(142 50% 94%) 30%, hsl(160 40% 97%) 60%, hsl(142 60% 95%) 100%);
+    background: 
+      radial-gradient(ellipse 80% 60% at 10% 20%, hsl(152 80% 88% / 0.6) 0%, transparent 60%),
+      radial-gradient(ellipse 70% 50% at 90% 70%, hsl(142 70% 85% / 0.5) 0%, transparent 55%),
+      radial-gradient(ellipse 50% 40% at 50% 50%, hsl(160 60% 90% / 0.4) 0%, transparent 50%),
+      linear-gradient(170deg, hsl(160 65% 93%) 0%, hsl(142 75% 90%) 35%, hsl(152 55% 94%) 65%, hsl(140 65% 91%) 100%);
     background-attachment: fixed;
     min-height: 100vh;
   }
