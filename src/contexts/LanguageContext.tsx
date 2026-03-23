@@ -424,6 +424,12 @@ const translations: Record<Language, Record<string, string>> = {
     "about.app4": "Rekreačné domy",
     "about.app5": "Mobilné domy",
     "about.app6": "Lode a jachty",
+    "about.appDesc1": "Napájajte svoj domov, znížte náklady na elektrickú energiu a zostaňte nezávislí so stabilným hybridným veterno-solárnym systémom.",
+    "about.appDesc2": "Prevádzkujte osvetlenie, nástroje a malé spotrebiče s off-grid systémom, ktorý generuje a ukladá vlastnú energiu.",
+    "about.appDesc3": "Zostaňte plne nezávislí v odľahlých oblastiach s hybridnou turbínou navrhnutou pre nepretržitú, spoľahlivú výrobu energie.",
+    "about.appDesc4": "Udržujte svoju dovolenkovú chatu napájanú celý rok s nenáročným systémom, ktorý funguje v meniacich sa podmienkach.",
+    "about.appDesc5": "Vyrábajte čistú energiu na cestách s kompaktným systémom vytvoreným pre mobilitu a efektívne nabíjanie batérií.",
+    "about.appDesc6": "Napájajte palubné systémy pomocou veternej a solárnej energie v priestorovo efektívnom hybridnom riešení.",
 
     // Product
     "product.badge": "Naša misia",
