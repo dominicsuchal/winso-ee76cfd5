@@ -117,11 +117,7 @@
   body {
     @apply text-foreground font-sans antialiased;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background: 
-      radial-gradient(ellipse 80% 60% at 10% 20%, hsl(152 80% 88% / 0.6) 0%, transparent 60%),
-      radial-gradient(ellipse 70% 50% at 90% 70%, hsl(142 70% 85% / 0.5) 0%, transparent 55%),
-      radial-gradient(ellipse 50% 40% at 50% 50%, hsl(160 60% 90% / 0.4) 0%, transparent 50%),
-      linear-gradient(170deg, hsl(160 65% 93%) 0%, hsl(142 75% 90%) 35%, hsl(152 55% 94%) 65%, hsl(140 65% 91%) 100%);
+    background: linear-gradient(135deg, hsl(152 60% 92%) 0%, hsl(148 40% 95%) 40%, hsl(0 0% 98%) 100%);
     background-attachment: fixed;
     min-height: 100vh;
   }
