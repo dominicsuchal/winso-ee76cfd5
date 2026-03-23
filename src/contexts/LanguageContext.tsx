@@ -36,7 +36,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.headline": "Technology That",
     "about.headlineHighlight": "Adapts",
     "about.p1": "At WINSO, we aim to make renewable energy simpler, smarter, and more efficient. Our turbine combines wind and solar power into one hybrid system that produces stable energy even when weather conditions change.",
-    "about.p2": "We believe the future of energy lies in technology that adapts, not waits. That's why WINSO uses solar-powered motor support, flexible solar blades, and intelligent control systems to keep performance high at all times.",
+    "about.p2": "We believe the future of energy lies in technology that adapts, not waits. That's why WINSO uses solar-powered motor support, flexible solar blades, and intelligent control systems to keep performance high at all times. Thanks to its compact and integrated design, the system also requires significantly less space compared to traditional separate solutions.",
     "about.p3": "Our vision is clear: deliver reliable clean energy anywhere, with a system that works day and night — and moves renewable power a step forward.",
     "about.feature1": "Solar-powered motor support",
     "about.feature2": "Flexible solar blades",
