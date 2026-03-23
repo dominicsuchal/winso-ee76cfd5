@@ -236,6 +236,12 @@ const translations: Record<Language, Record<string, string>> = {
     "about.app4": "Ferienhäuser",
     "about.app5": "Wohnmobile",
     "about.app6": "Boote & Yachten",
+    "about.appDesc1": "Versorgen Sie Ihr Zuhause mit Strom, senken Sie die Stromkosten und bleiben Sie unabhängig mit einem stabilen hybriden Wind-Solar-System.",
+    "about.appDesc2": "Betreiben Sie Beleuchtung, Werkzeuge und kleine Geräte mit einem netzunabhängigen System, das seine eigene Energie erzeugt und speichert.",
+    "about.appDesc3": "Bleiben Sie in abgelegenen Gebieten vollständig unabhängig mit einer Hybridturbine, die für kontinuierliche, zuverlässige Energieerzeugung ausgelegt ist.",
+    "about.appDesc4": "Halten Sie Ihr Ferienhaus das ganze Jahr über mit Strom versorgt – mit einem wartungsarmen System, das bei wechselnden Bedingungen funktioniert.",
+    "about.appDesc5": "Erzeugen Sie unterwegs saubere Energie mit einem kompakten System, das für Mobilität und effizientes Laden von Batterien gebaut ist.",
+    "about.appDesc6": "Versorgen Sie Bordsysteme mit Wind- und Solarenergie in einer platzsparenden Hybridlösung.",
 
     // Product
     "product.badge": "Unsere Mission",
