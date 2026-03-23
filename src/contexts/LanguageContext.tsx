@@ -48,6 +48,12 @@ const translations: Record<Language, Record<string, string>> = {
     "about.app4": "Vacation Homes",
     "about.app5": "Mobile Homes",
     "about.app6": "Boats & Yachts",
+    "about.appDesc1": "Power your home, reduce electricity costs, and stay independent with a stable hybrid wind-solar system.",
+    "about.appDesc2": "Run lighting, tools, and small appliances with an off-grid system that generates and stores its own energy.",
+    "about.appDesc3": "Stay fully independent in remote areas with a hybrid turbine designed for continuous, reliable energy generation.",
+    "about.appDesc4": "Keep your holiday home powered year-round with a low-maintenance system that works in changing conditions.",
+    "about.appDesc5": "Produce clean energy on the go with a compact system built for mobility and efficient battery charging.",
+    "about.appDesc6": "Power onboard systems using wind and solar energy combined in a space-efficient hybrid solution.",
 
     // Product
     "product.badge": "Our Mission",
