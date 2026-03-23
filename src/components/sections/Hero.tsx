@@ -13,21 +13,21 @@ const Hero = () => {
       
       {/* Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent/15 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-float delay-300" />
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-primary/8 rounded-full blur-3xl animate-float delay-300" />
       </div>
 
       {/* Floating Logo with Green Glow */}
       <div className="absolute right-10 lg:right-32 top-1/2 -translate-y-1/2 hidden lg:block">
         <div className="relative">
           {/* Green glow effect rings */}
-          <div className="absolute inset-0 w-96 h-96 rounded-full bg-cta/15 blur-3xl animate-pulse" />
-          <div className="absolute inset-4 w-88 h-88 rounded-full bg-cta/20 blur-2xl" />
+          <div className="absolute inset-0 w-96 h-96 rounded-full bg-cta/10 blur-3xl animate-pulse" />
+          <div className="absolute inset-4 w-88 h-88 rounded-full bg-cta/15 blur-2xl" />
           
           {/* Rotating border rings */}
-          <div className="w-96 h-96 rounded-full border-2 border-cta/40 flex items-center justify-center animate-spin-slow">
-            <div className="absolute w-80 h-80 rounded-full border border-cta/30" />
-            <div className="absolute w-64 h-64 rounded-full border border-cta/40" />
+          <div className="w-96 h-96 rounded-full border-2 border-cta/30 flex items-center justify-center animate-spin-slow">
+            <div className="absolute w-80 h-80 rounded-full border border-cta/20" />
+            <div className="absolute w-64 h-64 rounded-full border border-cta/30" />
           </div>
           
           {/* Logo in center with green glow */}

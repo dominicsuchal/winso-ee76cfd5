@@ -42,28 +42,15 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <a href="#" className="flex items-center gap-2 mb-6">
               <div className="bg-cta rounded-lg p-2">
-                <img 
-                  src={winsoLogo} 
-                  alt="WINSO - Hybrid is simply better" 
-                  className="h-8 w-auto"
-                />
+                <img src={winsoLogo} alt="WINSO - Hybrid is simply better" className="h-8 w-auto" />
               </div>
             </a>
-            <p className="text-primary-foreground/60 mb-4">
-              {t("footer.slogan")}
-            </p>
-            <p className="text-primary-foreground/60 mb-6 max-w-sm">
-              {t("footer.description")}
-            </p>
+            <p className="text-background/60 mb-4">{t("footer.slogan")}</p>
+            <p className="text-background/60 mb-6 max-w-sm">{t("footer.description")}</p>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors duration-300"
-                >
-                  <social.icon className="w-5 h-5 text-primary-foreground" />
+                <a key={social.label} href={social.href} aria-label={social.label} className="w-10 h-10 rounded-lg bg-background/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors duration-300">
+                  <social.icon className="w-5 h-5 text-background" />
                 </a>
               ))}
             </div>
@@ -71,16 +58,11 @@ const Footer = () => {
 
           {/* Product Links */}
           <div>
-            <h4 className="font-semibold text-primary-foreground mb-4">{t("footer.product")}</h4>
+            <h4 className="font-semibold text-background mb-4">{t("footer.product")}</h4>
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-primary-foreground/60 hover:text-accent transition-colors duration-200"
-                  >
-                    {link.label}
-                  </a>
+                  <a href={link.href} className="text-background/60 hover:text-accent transition-colors duration-200">{link.label}</a>
                 </li>
               ))}
             </ul>
@@ -88,16 +70,11 @@ const Footer = () => {
 
           {/* Company Links */}
           <div>
-            <h4 className="font-semibold text-primary-foreground mb-4">{t("footer.company")}</h4>
+            <h4 className="font-semibold text-background mb-4">{t("footer.company")}</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-primary-foreground/60 hover:text-accent transition-colors duration-200"
-                  >
-                    {link.label}
-                  </a>
+                  <a href={link.href} className="text-background/60 hover:text-accent transition-colors duration-200">{link.label}</a>
                 </li>
               ))}
             </ul>
@@ -105,16 +82,11 @@ const Footer = () => {
 
           {/* Resources Links */}
           <div>
-            <h4 className="font-semibold text-primary-foreground mb-4">{t("footer.resources")}</h4>
+            <h4 className="font-semibold text-background mb-4">{t("footer.resources")}</h4>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-primary-foreground/60 hover:text-accent transition-colors duration-200"
-                  >
-                    {link.label}
-                  </a>
+                  <a href={link.href} className="text-background/60 hover:text-accent transition-colors duration-200">{link.label}</a>
                 </li>
               ))}
             </ul>
@@ -122,30 +94,13 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-primary-foreground/10">
+        <div className="pt-8 border-t border-background/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-primary-foreground/40 text-sm">
-              © {currentYear} {t("footer.copyright")}
-            </p>
+            <p className="text-background/40 text-sm">© {currentYear} {t("footer.copyright")}</p>
             <div className="flex gap-6 text-sm">
-              <a
-                href="#"
-                className="text-primary-foreground/40 hover:text-primary-foreground transition-colors"
-              >
-                {t("footer.privacy")}
-              </a>
-              <a
-                href="#"
-                className="text-primary-foreground/40 hover:text-primary-foreground transition-colors"
-              >
-                {t("footer.terms")}
-              </a>
-              <a
-                href="#"
-                className="text-primary-foreground/40 hover:text-primary-foreground transition-colors"
-              >
-                {t("footer.cookies")}
-              </a>
+              <a href="#" className="text-background/40 hover:text-background transition-colors">{t("footer.privacy")}</a>
+              <a href="#" className="text-background/40 hover:text-background transition-colors">{t("footer.terms")}</a>
+              <a href="#" className="text-background/40 hover:text-background transition-colors">{t("footer.cookies")}</a>
             </div>
           </div>
         </div>
