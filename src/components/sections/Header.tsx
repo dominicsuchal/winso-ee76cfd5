@@ -29,7 +29,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-foreground/95 backdrop-blur-lg shadow-soft"
+          ? "bg-card/95 backdrop-blur-lg shadow-soft border-b border-border"
           : "bg-transparent"
       }`}
     >
@@ -52,11 +52,7 @@ const Header = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className={`font-medium transition-colors duration-200 ${
-                  isScrolled 
-                    ? "text-primary-foreground/70 hover:text-accent" 
-                    : "text-primary-foreground/70 hover:text-accent"
-                }`}
+                className="font-medium transition-colors duration-200 text-foreground/70 hover:text-accent"
               >
                 {link.label}
               </a>
@@ -73,7 +69,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden p-2 ${isScrolled ? "text-primary-foreground" : "text-primary-foreground"}`}
+            className="md:hidden p-2 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -83,13 +79,13 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-20 left-0 right-0 bg-foreground/95 backdrop-blur-lg shadow-card animate-fade-in">
+          <div className="md:hidden absolute top-20 left-0 right-0 bg-card/95 backdrop-blur-lg shadow-card animate-fade-in border-b border-border">
             <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-primary-foreground hover:text-accent font-medium py-2 transition-colors"
+                  className="text-foreground hover:text-accent font-medium py-2 transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
