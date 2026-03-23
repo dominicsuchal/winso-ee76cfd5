@@ -8,34 +8,24 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 gradient-hero animate-gradient" />
-      
-      {/* Decorative Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-primary/8 rounded-full blur-3xl animate-float delay-300" />
-      </div>
-
       {/* Floating Logo with Green Glow */}
       <div className="absolute right-10 lg:right-32 top-1/2 -translate-y-1/2 hidden lg:block">
         <div className="relative">
-          {/* Green glow effect rings */}
-          <div className="absolute inset-0 w-96 h-96 rounded-full bg-cta/10 blur-3xl animate-pulse" />
-          <div className="absolute inset-4 w-88 h-88 rounded-full bg-cta/15 blur-2xl" />
+          {/* Static glow */}
+          <div className="absolute inset-0 w-96 h-96 rounded-full bg-cta/10 blur-3xl" />
           
-          {/* Rotating border rings */}
-          <div className="w-96 h-96 rounded-full border-2 border-cta/30 flex items-center justify-center animate-spin-slow">
+          {/* Static border rings */}
+          <div className="w-96 h-96 rounded-full border-2 border-cta/30 flex items-center justify-center">
             <div className="absolute w-80 h-80 rounded-full border border-cta/20" />
             <div className="absolute w-64 h-64 rounded-full border border-cta/30" />
           </div>
           
-          {/* Logo in center with green glow */}
+          {/* Logo in center */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-8">
             <img 
               src={winsoLogo} 
               alt="WINSO" 
-              className="h-40 w-40 object-contain drop-shadow-[0_0_35px_hsl(var(--cta))] drop-shadow-[0_0_70px_hsl(var(--cta)/0.5)]"
+              className="h-40 w-40 object-contain drop-shadow-[0_0_35px_hsl(var(--cta))]"
             />
           </div>
         </div>
