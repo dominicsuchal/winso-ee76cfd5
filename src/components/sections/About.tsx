@@ -1,16 +1,18 @@
 import { Globe, Home, Sailboat, TreePine, Tent, Truck, Sun, Wind, Cpu } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useState } from "react";
 
 const About = () => {
   const { t } = useLanguage();
+  const [activeApp, setActiveApp] = useState<number | null>(null);
 
   const applications = [
-    { icon: Home, label: t("about.app1") },
-    { icon: TreePine, label: t("about.app2") },
-    { icon: Globe, label: t("about.app3") },
-    { icon: Tent, label: t("about.app4") },
-    { icon: Truck, label: t("about.app5") },
-    { icon: Sailboat, label: t("about.app6") },
+    { icon: Home, label: t("about.app1"), desc: t("about.appDesc1") },
+    { icon: TreePine, label: t("about.app2"), desc: t("about.appDesc2") },
+    { icon: Globe, label: t("about.app3"), desc: t("about.appDesc3") },
+    { icon: Tent, label: t("about.app4"), desc: t("about.appDesc4") },
+    { icon: Truck, label: t("about.app5"), desc: t("about.appDesc5") },
+    { icon: Sailboat, label: t("about.app6"), desc: t("about.appDesc6") },
   ];
 
   const features = [
@@ -77,11 +79,23 @@ const About = () => {
                 {applications.map((app, index) => (
                   <div
                     key={app.label}
-                    className="group p-4 rounded-2xl bg-muted/50 hover:bg-accent/10 transition-all duration-300 cursor-default border border-border"
-                    style={{ animationDelay: `${index * 100}ms` }}
+                    className={`group p-4 rounded-2xl transition-all duration-300 cursor-pointer border ${
+                      activeApp === index
+                        ? "bg-accent/10 border-accent/30 shadow-md"
+                        : "bg-muted/50 hover:bg-accent/10 border-border"
+                    }`}
+                    onClick={() => setActiveApp(activeApp === index ? null : index)}
                   >
-                    <div className="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center mb-3 group-hover:bg-accent group-hover:scale-105 transition-all duration-300">
-                      <app.icon className="w-6 h-6 text-accent group-hover:text-accent-foreground transition-colors" />
+                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-3 transition-all duration-300 ${
+                      activeApp === index
+                        ? "bg-accent scale-105"
+                        : "bg-accent/15 group-hover:bg-accent group-hover:scale-105"
+                    }`}>
+                      <app.icon className={`w-6 h-6 transition-colors ${
+                        activeApp === index
+                          ? "text-accent-foreground"
+                          : "text-accent group-hover:text-accent-foreground"
+                      }`} />
                     </div>
                     <span className="text-sm font-medium text-foreground">
                       {app.label}
@@ -89,6 +103,26 @@ const About = () => {
                   </div>
                 ))}
               </div>
+
+              {/* Description panel */}
+              {activeApp !== null && (
+                <div className="mt-6 p-5 rounded-2xl bg-accent/5 border border-accent/20 transition-all duration-300">
+                  <div className="flex items-start gap-3">
+                    {(() => {
+                      const ActiveIcon = applications[activeApp].icon;
+                      return <ActiveIcon className="w-5 h-5 text-accent mt-0.5 shrink-0" />;
+                    })()}
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-1">
+                        {applications[activeApp].label}
+                      </h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {applications[activeApp].desc}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
