@@ -115,8 +115,11 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply text-foreground font-sans antialiased;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(180deg, hsl(152 80% 96%) 0%, hsl(142 50% 94%) 30%, hsl(160 40% 97%) 60%, hsl(142 60% 95%) 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
   }
 
   h1, h2, h3, h4, h5, h6 {
