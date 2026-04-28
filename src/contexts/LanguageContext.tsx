@@ -54,6 +54,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.appDesc4": "Keep your holiday home powered year-round with a low-maintenance system that works in changing conditions.",
     "about.appDesc5": "Produce clean energy on the go with a compact system built for mobility and efficient battery charging.",
     "about.appDesc6": "Power onboard systems using wind and solar energy combined in a space-efficient hybrid solution.",
+    "about.appHint": "Click any category to reveal more information",
 
     // Product
     "product.badge": "Our Mission",
@@ -242,6 +243,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.appDesc4": "Halten Sie Ihr Ferienhaus das ganze Jahr über mit Strom versorgt – mit einem wartungsarmen System, das bei wechselnden Bedingungen funktioniert.",
     "about.appDesc5": "Erzeugen Sie unterwegs saubere Energie mit einem kompakten System, das für Mobilität und effizientes Laden von Batterien gebaut ist.",
     "about.appDesc6": "Versorgen Sie Bordsysteme mit Wind- und Solarenergie in einer platzsparenden Hybridlösung.",
+    "about.appHint": "Klicken Sie auf eine Kategorie, um mehr Informationen anzuzeigen",
 
     // Product
     "product.badge": "Unsere Mission",
@@ -430,6 +432,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.appDesc4": "Udržujte svoju dovolenkovú chatu napájanú celý rok s nenáročným systémom, ktorý funguje v meniacich sa podmienkach.",
     "about.appDesc5": "Vyrábajte čistú energiu na cestách s kompaktným systémom vytvoreným pre mobilitu a efektívne nabíjanie batérií.",
     "about.appDesc6": "Napájajte palubné systémy pomocou veternej a solárnej energie v priestorovo efektívnom hybridnom riešení.",
+    "about.appHint": "Kliknite na ktorúkoľvek kategóriu pre viac informácií",
 
     // Product
     "product.badge": "Naša misia",
