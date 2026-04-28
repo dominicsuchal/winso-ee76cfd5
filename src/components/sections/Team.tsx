@@ -1,19 +1,14 @@
-import { Briefcase, TrendingUp, Zap, ShoppingCart, Megaphone, Factory } from "lucide-react";
+import { Factory, MapPin, ShieldCheck } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Team = () => {
   const { t } = useLanguage();
 
-  const expertise = [
-    { icon: Briefcase, label: t("team.exp1") },
-    { icon: TrendingUp, label: t("team.exp2") },
-    { icon: Zap, label: t("team.exp3") },
-    { icon: ShoppingCart, label: t("team.exp4") },
-    { icon: Megaphone, label: t("team.exp5") },
-    { icon: Factory, label: t("team.exp6") },
+  const trustBlocks = [
+    { icon: Factory, title: t("team.trust1Title"), description: t("team.trust1Desc") },
+    { icon: MapPin, title: t("team.trust2Title"), description: t("team.trust2Desc") },
+    { icon: ShieldCheck, title: t("team.trust3Title"), description: t("team.trust3Desc") },
   ];
-
-  const areas = [t("team.area1"), t("team.area2"), t("team.area3"), t("team.area4")];
 
   return (
     <section id="team" className="py-24 lg:py-32 bg-background relative overflow-hidden">
@@ -24,63 +19,34 @@ const Team = () => {
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Content */}
-          <div>
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-foreground text-sm font-medium mb-6 backdrop-blur-sm">
-              {t("team.badge")}
-            </span>
-            
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
-              {t("team.headline")}{" "}
-              <span className="text-accent">{t("team.headlineHighlight")}</span>
-            </h2>
-            
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">{t("team.p1")}</p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-10">{t("team.p2")}</p>
+        {/* Header */}
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-foreground text-sm font-medium mb-6 backdrop-blur-sm">
+            {t("team.badge")}
+          </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
+            {t("team.headline")}{" "}
+            <span className="text-accent">{t("team.headlineHighlight")}</span>
+          </h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            {t("team.subheadline")}
+          </p>
+        </div>
 
-            {/* Expertise Tags */}
-            <div>
-              <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">{t("team.expertise")}</h4>
-              <div className="flex flex-wrap gap-3">
-                {expertise.map((item) => (
-                  <div key={item.label} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card backdrop-blur-sm border border-border">
-                    <item.icon className="w-4 h-4 text-accent" />
-                    <span className="text-sm font-medium text-foreground">{item.label}</span>
-                  </div>
-                ))}
+        {/* Trust blocks */}
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {trustBlocks.map((b) => (
+            <div
+              key={b.title}
+              className="p-6 lg:p-8 rounded-2xl bg-card border border-border shadow-soft hover:border-accent/30 transition-colors duration-300"
+            >
+              <div className="w-14 h-14 rounded-xl bg-accent/15 flex items-center justify-center mb-5">
+                <b.icon className="w-7 h-7 text-accent" />
               </div>
+              <h3 className="text-xl font-semibold text-foreground mb-3">{b.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">{b.description}</p>
             </div>
-          </div>
-
-          {/* Visual */}
-          <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-br from-accent/10 to-primary/5 rounded-3xl blur-xl" />
-            <div className="relative bg-card backdrop-blur-sm rounded-3xl p-8 lg:p-10 border border-border shadow-card">
-              {/* Team Stats */}
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                <div className="text-center p-6 rounded-2xl bg-muted/50 border border-border">
-                  <div className="text-4xl font-bold text-accent mb-2">{t("team.years")}</div>
-                  <div className="text-sm text-muted-foreground">{t("team.combined")}<br/>{t("team.experience")}</div>
-                </div>
-                <div className="text-center p-6 rounded-2xl bg-muted/50 border border-border">
-                  <div className="text-4xl font-bold text-accent mb-2">3+</div>
-                  <div className="text-sm text-muted-foreground">{t("team.industries")}<br/>{t("team.mastered")}</div>
-                </div>
-              </div>
-
-              {/* Growth Areas */}
-              <h4 className="font-semibold text-foreground mb-4">{t("team.expanding")}</h4>
-              <div className="space-y-3">
-                {areas.map((value, index) => (
-                  <div key={index} className="flex items-center gap-3 p-3 rounded-xl bg-muted/50 border border-border">
-                    <div className="w-2 h-2 rounded-full bg-accent" />
-                    <span className="text-foreground text-sm">{value}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
