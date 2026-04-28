@@ -221,6 +221,20 @@ const translations: Record<Language, Record<string, string>> = {
     "audiences.biz.note": "We're opening early conversations with partners and pilot customers shaping the roadmap with us.",
     "audiences.biz.ctaPrimary": "Request Information",
     "audiences.biz.ctaSecondary": "Discuss a Pilot",
+
+    // Key Benefits
+    "benefits.badge": "Key Benefits",
+    "benefits.headline": "Why",
+    "benefits.headlineHighlight": "WINSO?",
+    "benefits.subheadline": "Clean energy that just works — designed around your everyday needs, not complicated technical specs.",
+    "benefits.b1Title": "Reliable in All Conditions",
+    "benefits.b1Desc": "Combines wind and solar so you keep getting power, whether the sun is shining or the wind is blowing.",
+    "benefits.b2Title": "Energy Independence",
+    "benefits.b2Desc": "Generate your own power and stay connected anywhere — perfect for off-grid homes, cabins, and adventures.",
+    "benefits.b3Title": "Easy Installation",
+    "benefits.b3Desc": "An all-in-one design that's simple to set up and integrate, with no complex extra equipment needed.",
+    "benefits.b4Title": "Efficient Hybrid System",
+    "benefits.b4Desc": "Two energy sources in one compact unit deliver more power than a single wind or solar setup alone.",
   },
   de: {
     // Header
@@ -434,6 +448,20 @@ const translations: Record<Language, Record<string, string>> = {
     "audiences.biz.note": "Wir starten erste Gespräche mit Partnern und Pilotkunden, die die Roadmap mit uns gestalten.",
     "audiences.biz.ctaPrimary": "Informationen anfordern",
     "audiences.biz.ctaSecondary": "Pilotprojekt besprechen",
+
+    // Key Benefits
+    "benefits.badge": "Hauptvorteile",
+    "benefits.headline": "Warum",
+    "benefits.headlineHighlight": "WINSO?",
+    "benefits.subheadline": "Saubere Energie, die einfach funktioniert – ausgerichtet auf Ihren Alltag, nicht auf komplizierte Datenblätter.",
+    "benefits.b1Title": "Zuverlässig bei jedem Wetter",
+    "benefits.b1Desc": "Kombiniert Wind und Sonne, damit Sie Strom haben – egal, ob die Sonne scheint oder der Wind weht.",
+    "benefits.b2Title": "Energieunabhängigkeit",
+    "benefits.b2Desc": "Erzeugen Sie Ihren eigenen Strom und bleiben Sie überall versorgt – ideal für Off-Grid-Häuser, Hütten und Reisen.",
+    "benefits.b3Title": "Einfache Installation",
+    "benefits.b3Desc": "Ein All-in-One-Design, das sich leicht aufstellen und integrieren lässt – ganz ohne komplexes Zusatzequipment.",
+    "benefits.b4Title": "Effizientes Hybridsystem",
+    "benefits.b4Desc": "Zwei Energiequellen in einer kompakten Einheit liefern mehr Leistung als reine Wind- oder Solaranlagen.",
   },
   sk: {
     // Header
@@ -647,6 +675,20 @@ const translations: Record<Language, Record<string, string>> = {
     "audiences.biz.note": "Otvárame prvé rozhovory s partnermi a pilotnými zákazníkmi, ktorí s nami formujú smerovanie produktu.",
     "audiences.biz.ctaPrimary": "Vyžiadať informácie",
     "audiences.biz.ctaSecondary": "Diskutovať o pilote",
+
+    // Key Benefits
+    "benefits.badge": "Hlavné výhody",
+    "benefits.headline": "Prečo",
+    "benefits.headlineHighlight": "WINSO?",
+    "benefits.subheadline": "Čistá energia, ktorá jednoducho funguje – navrhnutá podľa vašich každodenných potrieb, nie podľa zložitých technických parametrov.",
+    "benefits.b1Title": "Spoľahlivosť v každom počasí",
+    "benefits.b1Desc": "Kombinuje vietor a slnko, takže máte energiu, či už svieti slnko alebo fúka vietor.",
+    "benefits.b2Title": "Energetická nezávislosť",
+    "benefits.b2Desc": "Vyrábajte si vlastnú energiu a zostaňte pripojení kdekoľvek – ideálne pre off-grid domy, chaty aj dobrodružstvá.",
+    "benefits.b3Title": "Jednoduchá inštalácia",
+    "benefits.b3Desc": "Kompletný dizajn, ktorý sa ľahko inštaluje a integruje – bez zložitého doplnkového vybavenia.",
+    "benefits.b4Title": "Efektívny hybridný systém",
+    "benefits.b4Desc": "Dva zdroje energie v jednej kompaktnej jednotke poskytujú viac výkonu než samostatný veterný alebo solárny systém.",
   },
 };
 
