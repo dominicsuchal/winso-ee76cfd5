@@ -1,16 +1,14 @@
-import { Zap, Shield, Wallet, Cpu, Users, Award } from "lucide-react";
+import { Wind, Sun, ShieldCheck, CloudRain } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const WhyWinso = () => {
   const { t } = useLanguage();
 
   const benefits = [
-    { icon: Zap, title: t("why.benefit1Title"), description: t("why.benefit1Desc") },
-    { icon: Shield, title: t("why.benefit2Title"), description: t("why.benefit2Desc") },
-    { icon: Wallet, title: t("why.benefit3Title"), description: t("why.benefit3Desc") },
-    { icon: Cpu, title: t("why.benefit4Title"), description: t("why.benefit4Desc") },
-    { icon: Users, title: t("why.benefit5Title"), description: t("why.benefit5Desc") },
-    { icon: Award, title: t("why.benefit6Title"), description: t("why.benefit6Desc") },
+    { icon: Wind, title: t("why.benefit1Title"), description: t("why.benefit1Desc") },
+    { icon: Sun, title: t("why.benefit2Title"), description: t("why.benefit2Desc") },
+    { icon: ShieldCheck, title: t("why.benefit3Title"), description: t("why.benefit3Desc") },
+    { icon: CloudRain, title: t("why.benefit4Title"), description: t("why.benefit4Desc") },
   ];
 
   return (
@@ -36,7 +34,7 @@ const WhyWinso = () => {
         </div>
 
         {/* Benefits Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefits.map((benefit) => (
             <div key={benefit.title} className="group p-6 lg:p-8 rounded-2xl bg-card backdrop-blur-sm border border-border hover:border-accent/30 transition-all duration-300 shadow-soft">
               <div className="w-14 h-14 rounded-xl bg-accent/15 flex items-center justify-center mb-5 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
