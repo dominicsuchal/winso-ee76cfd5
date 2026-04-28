@@ -1,12 +1,14 @@
 import { Globe, Home, Sailboat, TreePine, Tent, Truck, Sun, Wind, Cpu, MousePointerClick } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import mobileHomeImg from "@/assets/app-mobile-home.jpeg";
 import boatYachtImg from "@/assets/app-boat-yacht.jpeg";
 
 const About = () => {
   const { t } = useLanguage();
   const [activeApp, setActiveApp] = useState<number | null>(null);
+  const [lightboxImg, setLightboxImg] = useState<string | null>(null);
 
   const applications = [
     { icon: Home, label: t("about.app1"), desc: t("about.appDesc1"), image: null as string | null },
@@ -120,8 +122,9 @@ const About = () => {
                       <img
                         src={applications[activeApp].image as string}
                         alt={applications[activeApp].label}
-                        className="w-32 sm:w-36 h-auto object-contain rounded-xl shrink-0"
+                        className="w-32 sm:w-36 h-auto object-contain rounded-xl shrink-0 cursor-zoom-in hover:opacity-90 transition-opacity"
                         loading="lazy"
+                        onClick={() => setLightboxImg(applications[activeApp].image as string)}
                       />
                     )}
                     <div className="flex items-start gap-3 flex-1 min-w-0">
@@ -145,6 +148,18 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      <Dialog open={!!lightboxImg} onOpenChange={(open) => !open && setLightboxImg(null)}>
+        <DialogContent className="max-w-4xl p-0 bg-transparent border-none shadow-none">
+          {lightboxImg && (
+            <img
+              src={lightboxImg}
+              alt="Preview"
+              className="w-full h-auto rounded-xl"
+            />
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
