@@ -109,26 +109,28 @@ const About = () => {
               {/* Description panel */}
               {activeApp !== null && (
                 <div className="mt-6 p-5 rounded-2xl bg-accent/5 border border-accent/20 transition-all duration-300">
-                  {applications[activeApp].image && (
-                    <img
-                      src={applications[activeApp].image as string}
-                      alt={applications[activeApp].label}
-                      className="max-h-40 w-auto mx-auto object-contain rounded-xl mb-4"
-                      loading="lazy"
-                    />
-                  )}
-                  <div className="flex items-start gap-3">
-                    {(() => {
-                      const ActiveIcon = applications[activeApp].icon;
-                      return <ActiveIcon className="w-5 h-5 text-accent mt-0.5 shrink-0" />;
-                    })()}
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-1">
-                        {applications[activeApp].label}
-                      </h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {applications[activeApp].desc}
-                      </p>
+                  <div className="flex items-start gap-4">
+                    {applications[activeApp].image && (
+                      <img
+                        src={applications[activeApp].image as string}
+                        alt={applications[activeApp].label}
+                        className="w-32 sm:w-36 h-auto object-contain rounded-xl shrink-0"
+                        loading="lazy"
+                      />
+                    )}
+                    <div className="flex items-start gap-3 flex-1 min-w-0">
+                      {(() => {
+                        const ActiveIcon = applications[activeApp].icon;
+                        return <ActiveIcon className="w-5 h-5 text-accent mt-0.5 shrink-0" />;
+                      })()}
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-1">
+                          {applications[activeApp].label}
+                        </h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {applications[activeApp].desc}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
