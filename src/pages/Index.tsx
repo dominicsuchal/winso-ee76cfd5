@@ -16,9 +16,9 @@ const Index = () => {
       <Hero />
       <About />
       <Product />
+      <Audiences />
       <BusinessModel />
       <WhyWinso />
-      <Audiences />
       <Team />
       <Contact />
       <Footer />
