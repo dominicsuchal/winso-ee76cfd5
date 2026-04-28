@@ -113,7 +113,7 @@ const About = () => {
                     <img
                       src={applications[activeApp].image as string}
                       alt={applications[activeApp].label}
-                      className="w-full h-48 object-cover rounded-xl mb-4"
+                      className="max-h-40 w-auto mx-auto object-contain rounded-xl mb-4"
                       loading="lazy"
                     />
                   )}
