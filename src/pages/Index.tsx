@@ -4,6 +4,7 @@ import About from "@/components/sections/About";
 import Product from "@/components/sections/Product";
 import BusinessModel from "@/components/sections/BusinessModel";
 import WhyWinso from "@/components/sections/WhyWinso";
+import Audiences from "@/components/sections/Audiences";
 import Team from "@/components/sections/Team";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
@@ -17,6 +18,7 @@ const Index = () => {
       <Product />
       <BusinessModel />
       <WhyWinso />
+      <Audiences />
       <Team />
       <Contact />
       <Footer />
