@@ -82,8 +82,8 @@ const translations: Record<Language, Record<string, string>> = {
     "product.feat3Desc": "Electric motor provides additional drive in low-wind conditions for consistent output.",
     "product.feat4Title": "Space Efficient",
     "product.feat4Desc": "No extra space required—solar integration means everything in one compact unit.",
-    "product.feat5Title": "Cost-Effective",
-    "product.feat5Desc": "Not significantly more expensive than traditional vertical turbines.",
+    "product.feat5Title": "Smart Value",
+    "product.feat5Desc": "More performance and higher energy output for a comparable investment to a traditional turbine.",
     "product.feat6Title": "Smart Safety",
     "product.feat6Desc": "Movable blade supports prevent overspeeding while eliminating headwind resistance.",
 
@@ -305,8 +305,8 @@ const translations: Record<Language, Record<string, string>> = {
     "product.feat3Desc": "Der Elektromotor liefert zusätzlichen Antrieb bei schwachem Wind für konstante Leistung.",
     "product.feat4Title": "Platzsparend",
     "product.feat4Desc": "Kein zusätzlicher Platz erforderlich — Solarintegration bedeutet alles in einer kompakten Einheit.",
-    "product.feat5Title": "Kosteneffektiv",
-    "product.feat5Desc": "Nicht wesentlich teurer als traditionelle vertikale Turbinen.",
+    "product.feat5Title": "Clevere Investition",
+    "product.feat5Desc": "Mehr Leistung und höherer Energieertrag bei vergleichbarer Investition wie eine herkömmliche Turbine.",
     "product.feat6Title": "Intelligente Sicherheit",
     "product.feat6Desc": "Bewegliche Blattstützen verhindern Überdrehzahl und eliminieren Gegenwindwiderstand.",
 
@@ -528,8 +528,8 @@ const translations: Record<Language, Record<string, string>> = {
     "product.feat3Desc": "Elektromotor poskytuje dodatočný pohon pri slabom vetre pre konzistentný výkon.",
     "product.feat4Title": "Priestorovo efektívne",
     "product.feat4Desc": "Nie je potrebný žiadny extra priestor — solárna integrácia znamená všetko v jednej kompaktnej jednotke.",
-    "product.feat5Title": "Nákladovo efektívne",
-    "product.feat5Desc": "Nie je výrazne drahšia ako tradičné vertikálne turbíny.",
+    "product.feat5Title": "Inteligentná hodnota",
+    "product.feat5Desc": "Vyšší výkon a väčší energetický výnos pri porovnateľnej investícii ako bežná turbína.",
     "product.feat6Title": "Inteligentná bezpečnosť",
     "product.feat6Desc": "Pohyblivé podpery lopatiek zabraňujú pretáčaniu a eliminujú odpor proti vetru.",
 
