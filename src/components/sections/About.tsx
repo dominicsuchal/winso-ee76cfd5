@@ -1,18 +1,20 @@
 import { Globe, Home, Sailboat, TreePine, Tent, Truck, Sun, Wind, Cpu } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
+import mobileHomeImg from "@/assets/app-mobile-home.jpeg";
+import boatYachtImg from "@/assets/app-boat-yacht.jpeg";
 
 const About = () => {
   const { t } = useLanguage();
   const [activeApp, setActiveApp] = useState<number | null>(null);
 
   const applications = [
-    { icon: Home, label: t("about.app1"), desc: t("about.appDesc1") },
-    { icon: TreePine, label: t("about.app2"), desc: t("about.appDesc2") },
-    { icon: Globe, label: t("about.app3"), desc: t("about.appDesc3") },
-    { icon: Tent, label: t("about.app4"), desc: t("about.appDesc4") },
-    { icon: Truck, label: t("about.app5"), desc: t("about.appDesc5") },
-    { icon: Sailboat, label: t("about.app6"), desc: t("about.appDesc6") },
+    { icon: Home, label: t("about.app1"), desc: t("about.appDesc1"), image: null as string | null },
+    { icon: TreePine, label: t("about.app2"), desc: t("about.appDesc2"), image: null as string | null },
+    { icon: Globe, label: t("about.app3"), desc: t("about.appDesc3"), image: null as string | null },
+    { icon: Tent, label: t("about.app4"), desc: t("about.appDesc4"), image: null as string | null },
+    { icon: Truck, label: t("about.app5"), desc: t("about.appDesc5"), image: mobileHomeImg },
+    { icon: Sailboat, label: t("about.app6"), desc: t("about.appDesc6"), image: boatYachtImg },
   ];
 
   const features = [
@@ -107,6 +109,14 @@ const About = () => {
               {/* Description panel */}
               {activeApp !== null && (
                 <div className="mt-6 p-5 rounded-2xl bg-accent/5 border border-accent/20 transition-all duration-300">
+                  {applications[activeApp].image && (
+                    <img
+                      src={applications[activeApp].image as string}
+                      alt={applications[activeApp].label}
+                      className="w-full h-48 object-cover rounded-xl mb-4"
+                      loading="lazy"
+                    />
+                  )}
                   <div className="flex items-start gap-3">
                     {(() => {
                       const ActiveIcon = applications[activeApp].icon;
