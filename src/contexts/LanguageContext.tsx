@@ -57,7 +57,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.appHint": "Click any category to reveal more information",
 
     // Product
-    "product.badge": "Our Mission",
+    "product.badge": "Our Product",
     "product.headline": "The",
     "product.headlineHighlight": "WINSO",
     "product.headlineEnd": "Turbine",
@@ -246,7 +246,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.appHint": "Klicken Sie auf eine Kategorie, um mehr Informationen anzuzeigen",
 
     // Product
-    "product.badge": "Unsere Mission",
+    "product.badge": "Unser Produkt",
     "product.headline": "Die",
     "product.headlineHighlight": "WINSO",
     "product.headlineEnd": "Turbine",
@@ -435,7 +435,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.appHint": "Kliknite na ktorúkoľvek kategóriu pre viac informácií",
 
     // Product
-    "product.badge": "Naša misia",
+    "product.badge": "Náš produkt",
     "product.headline": "Turbína",
     "product.headlineHighlight": "WINSO",
     "product.headlineEnd": "",
