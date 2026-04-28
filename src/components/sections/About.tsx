@@ -1,4 +1,4 @@
-import { Globe, Home, Sailboat, TreePine, Tent, Truck, Sun, Wind, Cpu } from "lucide-react";
+import { Globe, Home, Sailboat, TreePine, Tent, Truck, Sun, Wind, Cpu, MousePointerClick } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
 import mobileHomeImg from "@/assets/app-mobile-home.jpeg";
@@ -77,6 +77,12 @@ const About = () => {
               <h3 className="text-xl font-semibold text-foreground mb-6">
                 {t("about.appTitle")}
               </h3>
+              <div className="flex items-center gap-2 mb-5 px-4 py-2.5 rounded-xl bg-accent/10 border border-accent/20">
+                <MousePointerClick className="w-4 h-4 text-accent shrink-0" />
+                <span className="text-sm font-medium text-foreground">
+                  {t("about.appHint")}
+                </span>
+              </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 {applications.map((app, index) => (
                   <div
